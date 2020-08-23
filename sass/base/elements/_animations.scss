@@ -1,0 +1,16 @@
+a, 
+button, 
+input:focus, 
+input[type="button"], 
+input[type="submit"], 
+textarea:focus, 
+.button, 
+.site-header {
+    transition: all 0.2s ease-in-out;
+}
+
+button {    
+    &.dashicons-before:before {
+        transition: none;
+    }
+}

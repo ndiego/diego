@@ -1,0 +1,46 @@
+.site-header {
+    background-color: $color__background-main;
+    
+    & > .wrap {
+        padding: 2em 0;
+        
+        @media screen and ( max-width: $breakpoint__small-desktop ) {
+            padding: 1em 0;
+        }
+    }
+}
+
+.site-branding {
+    float: left;
+    padding: 0;
+    width: 162px;
+    
+    .site-title {
+        margin: 7px 0 6px;
+        
+        a {
+            color: $color__text-main;
+            font-weight: 900;
+            letter-spacing: .07em;
+            text-decoration: none;
+            text-transform: uppercase;
+        }
+        
+        a:hover {
+            color: $color__link-main-nav;
+        }
+    }
+
+    .site-description {
+        border: 0;
+        clip: rect(0,0,0,0);
+        height: 1px;
+        margin: 0;
+        overflow: hidden;
+        position: absolute !important;
+        width: 1px;
+        word-wrap: normal !important;
+    }
+}
+
+

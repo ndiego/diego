@@ -1,0 +1,51 @@
+.site-footer {
+    font-size: 1.6rem;
+    font-size: 16px;
+
+    .wrap {
+        border-top: 1px solid $color__borders;
+        padding: 3em 0;
+    }
+    
+    p {
+        margin: 0;
+    }
+    
+    .footer-widget > div {
+        display: flex;
+        justify-content: space-between;
+        
+        .footer-right {
+            font-size: 2rem;
+            font-size: 20px;
+            
+            a {
+                margin-left: 8px;
+                color: $color__text-main;
+                opacity: .3;
+                
+                &:hover {
+                    opacity: 1;
+                }
+            }
+        }
+        
+        @media screen and ( max-width: $breakpoint__tablet ) {
+            display: block;
+            text-align: center;
+            
+            .footer-right {
+                margin-top: 1em;
+            }
+        }
+    }
+    
+    .widget {
+        margin: 0;
+    }
+    
+    @media screen and ( max-width: $breakpoint__tablet ) {
+        padding-right: 5%;
+        padding-left: 5%;
+    }
+}

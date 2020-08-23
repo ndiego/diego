@@ -1,0 +1,137 @@
+.comments-area {
+	margin-top: 6rem;
+	
+	& > h2 {
+		font-size: 36px;
+		font-size: 3.6rem;
+	}
+	& > .comment-respond {
+		h3 {
+			font-size: 36px;
+			font-size: 3.6rem;
+		}
+	}
+}
+
+.comment-list {
+	list-style: none;
+    margin: 0;
+    padding: 0;
+	
+	.children {
+		margin: 0;
+    	padding: 0;
+	}
+}
+
+.comment {
+	border: 1px solid $color__borders;
+	border-bottom-width: 4px;
+	border-radius: $border__radius;
+	margin-top: 3rem;
+	padding: 3rem;
+}
+
+.comment-author {
+	display: flex;
+	align-items: center;
+	
+	img {
+		border-radius: 50%;
+		margin-right: 10px;
+	}
+	
+	.says {
+		margin-left: 10px;
+	}
+}
+
+.comment-metadata {
+	display: flex;
+	justify-content: space-between;
+	align-items: baseline;
+	margin-bottom: 2rem;
+	
+	a {
+		font-size: 1.4rem;
+    	font-weight: 700;
+    	letter-spacing: .08em;
+    	text-transform: uppercase;
+    	color: $color__text-main;
+    	text-decoration: none;
+		
+		&:hover {
+			color: $color__link-alt-hover
+		}
+	}
+}
+
+.comment-content a {
+	word-wrap: break-word;
+}
+
+.comment-respond {
+	h3 {
+		display: flex;
+		font-size: 30px;
+		font-size: 3rem;
+    	justify-content: space-between;
+    	align-items: flex-end;
+		
+		a {
+			font-size: 1.4rem;
+			font-weight: 700;
+			letter-spacing: .08em;
+			text-transform: uppercase;
+			color: $color__text-main;
+			text-decoration: none;
+			
+			&:hover {
+				color: $color__link-alt-hover
+			}
+		}
+	}
+	
+	label {
+		font-weight: $font__weight-heavy;
+		min-width: 200px;
+	}
+	
+	.comment-form-cookies-consent {
+		label {
+			font-weight: $font__weight-normal;
+			margin-left: .5rem;
+		}
+	}
+	
+	.comment-form-author,
+	.comment-form-email,
+	.comment-form-url {
+		display: flex;
+    	justify-content: space-between;
+    	align-items: center;
+		
+		label {
+			min-width: 10rem;
+		}
+		input {
+			display: inline-block;
+			width: 100%;
+		}
+		
+		@media screen and ( max-width: $breakpoint__mobile ) {
+			display: block;
+			
+			label,
+			input {
+				display: block;
+			}
+		}
+	}
+}
+
+
+
+.bypostauthor {
+	display: block;
+}

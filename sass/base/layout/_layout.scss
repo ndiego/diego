@@ -1,0 +1,46 @@
+.site-header,
+.site-inner .content-sidebar-wrap,
+.site-footer {
+    @media screen and ( max-width: $breakpoint__tablet ) {
+        padding-right: 5%;
+        padding-left: 5%;
+    }
+}
+
+.content-sidebar-wrap,
+.wrap {
+    margin: 0 auto;
+    max-width: 1120px;
+    
+    @media screen and ( max-width: $breakpoint__small-desktop ) {
+        max-width: 960px;
+    }
+}
+
+.entry-content .alignwide {
+    width: calc(100% + 20vw);
+    position: relative;
+    margin: 4rem -10vw;
+    
+    @media screen and ( max-width: $breakpoint__tablet ) {
+        width: 100vw;
+        margin: 4rem calc(50% - 50vw);
+    }
+    
+    &.no-margin {
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+}
+.entry-content .alignfull {
+    width: 100vw;
+    margin: 4rem calc(50% - 50vw);
+    
+    &.no-margin {
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+}
+.alignfull img {
+    width: 100vw;
+}

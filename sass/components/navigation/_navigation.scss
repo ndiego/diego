@@ -1,0 +1,162 @@
+.main-navigation {
+	float: right;
+    max-width: 832px;
+
+	ul {
+		display: none;
+		list-style: none;
+		margin: 0;
+		padding-left: 0;
+
+		ul {
+			box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
+			float: left;
+			position: absolute;
+			top: 100%;
+			left: -999em;
+			z-index: 99999;
+
+			ul {
+				left: -999em;
+				top: 0;
+			}
+
+			li {
+
+				&:hover > ul,
+				&.focus > ul {
+					display: block;
+					left: auto;
+				}
+			}
+
+			a {
+				width: 200px;
+			}
+
+			:hover > a,
+			.focus > a {
+			}
+
+			a:hover,
+			a.focus {
+			}
+		}
+
+		li:hover > ul,
+		li.focus > ul {
+			left: auto;
+		}
+	}
+
+	li {
+		position: relative;
+
+		&:hover > a,
+		&.focus > a {
+			color: $color__text-main;
+			opacity: 1;
+		}
+	}
+
+	a {
+		color: $color__text-main;
+		display: block;
+		font-size: 16px;
+		font-size: 1.6rem;
+		font-weight: 500;
+		line-height: 1.75;
+		letter-spacing: -.01em;
+		opacity: .8;
+		padding: 10px 16px 8px;
+	    text-decoration: none;
+	}
+
+	.current_page_item > a,
+	.current-menu-item > a,
+	.current_page_ancestor > a,
+	.current-menu-ancestor > a {
+		color: $color__text-main;
+		font-weight: 700;
+	}
+}
+
+.main-navigation ul {
+	display: flex;
+}
+
+.menu-toggle-container {
+	display: none;
+}
+
+@media screen and ( max-width: $breakpoint__tablet ) {
+	
+	.main-navigation {
+		display: none;
+		
+		&.toggled {
+			clear: both;
+			display: block;
+			float: none;
+			max-width: 100%;
+			padding: 1em 0;
+
+			ul {
+				display: block;
+				
+				li {
+					border-bottom: 1px solid #dee2e6;
+					
+					a {
+						padding: 10px 0 8px;
+					}
+				}
+			}
+		}
+	}
+
+	/* Small menu. */
+	.menu-toggle-container {
+		display: block;
+		float: right;
+		
+		.menu-toggle {
+			align-items: center;
+			background-color: $color__background-main;
+			display: flex;
+			font-size: 15px;
+			font-size: 1.5rem;
+			padding-left: .9em;
+			
+			&:before {
+				margin-right: 5px;
+				margin-bottom: 2px;
+			}
+			&:hover {
+				background-color: $color__background-button-hover;
+			}	
+		}
+	}
+}
+
+.comment-navigation,
+.posts-navigation,
+.post-navigation {
+
+	.site-main & {
+		margin: 0 0 1.5em;
+	}
+
+	.nav-links {
+		display: flex;
+	}
+
+	.nav-previous {
+		flex: 1 0 50%;
+	}
+
+	.nav-next {
+		text-align: end;
+		flex: 1 0 50%;
+	}
+}

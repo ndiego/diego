@@ -1,0 +1,17 @@
+/* Core Image Block */
+.wp-block-image {
+    line-height: 1;
+    
+    figcaption {
+        font-size: 16px;
+        font-size: 1.6rem;
+        margin: 1rem 0;
+    }
+    
+    &.alignfull {
+        figcaption {
+            margin: 1rem 2rem;
+        }
+    }
+}
+
