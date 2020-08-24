@@ -16,6 +16,45 @@
 	}
 }
 
+.archive,
+.blog,
+.home {
+	.site-main {
+		margin-top: 6rem;
+		
+		@media screen and ( max-width: $breakpoint__tablet ) {
+			margin-top: 4rem;
+		}
+		
+		article {
+			margin-bottom: 4rem;
+		}
+		
+		.page-content,
+		.entry-content,
+		.entry-summary {
+			margin: 2rem 0 0;
+			
+			@media screen and ( max-width: $breakpoint__tablet ) {
+				margin: 2rem 0 0;
+			}
+		}
+		
+		.entry-header {
+			h2 {
+				margin: 0;
+				font-size: 3.5rem;
+			}
+		}
+		
+		.entry-footer {
+			font-size: 1.2rem;
+			margin-top: 0;
+			padding-top: 2rem;
+		}
+	}
+}
+
 .page-links {
 	clear: both;
 	margin: 0 0 1.5em;
@@ -44,7 +83,7 @@
 	/* Custom into text styles */
 	.intro {
 		font-size: 2.6rem;
-		font-weight: $font__weight-heavy;
+		font-family: $font__heavy;
     	line-height: 1.5;
     	margin-bottom: 4rem;
 	}
@@ -53,7 +92,53 @@
 .entry-footer {
 	border-top: 1px solid $color__borders;
 	display: flex;
+	font-family: $font__heavy;
+	font-size: 1.4rem;
 	justify-content: space-between;
-	margin-top: 2em;
-    padding-top: 2em;
+	letter-spacing: .08em;
+	margin-top: 3rem;
+    padding-top: 3rem;
+	text-transform: uppercase;
+	
+	.cat-links,
+	.tags-links {
+		display: block;
+		
+		a {
+			display: inline-block;
+		    background: #f0f1f2;
+			border-bottom: 0;
+			border-radius: $border__radius;
+			box-shadow: none;
+			color: $color__text-main;
+			margin: 0 10px 10px 0;
+			padding: .4rem .8rem 0;
+			text-decoration: none;
+
+			&:after {
+				content: none;
+			}
+			
+			&:hover {
+				background: $color__link-tag-hover;
+			}
+		}
+	}
+	
+	.edit-link {
+		a {
+			border-bottom: 0;
+			box-shadow: none;
+			color: $color__text-main;
+			text-decoration: none;
+
+			&:after {
+				content: none;
+			}
+			
+			&:hover {
+				color: $color__link-alt-hover
+			}
+		}
+	}
 }

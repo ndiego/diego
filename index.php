@@ -36,11 +36,24 @@ get_header();
 						 * If you want to override this in a child theme, then include a file
 						 * called content-___.php (where ___ is the Post Type name) and that will be used instead.
 						 */
-						get_template_part( 'template-parts/content', get_post_type() );
+						
+						if ( is_home() ) :
+							get_template_part( 'template-parts/content-archive' );
+						else : 
+							get_template_part( 'template-parts/content', get_post_type() );
+						endif;
 
 					endwhile;
-
-					the_posts_navigation();
+					
+					if ( is_home() ) :
+						the_posts_pagination( array(
+							'mid_size'  => 2,
+							'prev_text' => '&laquo; ' . __( 'Previous Page', 'textdomain' ),
+							'next_text' => __( 'Next Page', 'textdomain' ) . ' &raquo;',
+						) );
+					else : 
+						the_posts_navigation();
+					endif;
 
 				else :
 

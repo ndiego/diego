@@ -50,6 +50,25 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 
 --------------------------------------------------------------*/
 
+
+/* @import custom webfont (must be placed at the top of the stylesheet)
+--------------------------------------------- */
+@import url("//hello.myfonts.net/count/3c1b90");
+  
+@font-face {
+  font-family: 'AvenirLTStd-Heavy';
+  src: url('webFonts/AvenirLTStd-Heavy/font.woff2') format('woff2'), url('webFonts/AvenirLTStd-Heavy/font.woff') format('woff');
+}
+@font-face {
+  font-family: 'AvenirLTStd-Book';
+  src: url('webFonts/AvenirLTStd-Book/font.woff2') format('woff2'), url('webFonts/AvenirLTStd-Book/font.woff') format('woff');
+}
+@font-face {
+  font-family: 'AvenirLTStd-Medium';
+  src: url('webFonts/AvenirLTStd-Medium/font.woff2') format('woff2'), url('webFonts/AvenirLTStd-Medium/font.woff') format('woff');
+}
+
+
 // Import variables and mixins.
 @import "abstracts/abstracts";
 

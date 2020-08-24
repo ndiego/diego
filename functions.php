@@ -157,7 +157,7 @@ add_action( 'widgets_init', 'diego_widgets_init' );
 function diego_scripts() {
 	wp_enqueue_style( 'diego-style', get_stylesheet_uri(), array(), DIEGO_VERSION );
 	wp_style_add_data( 'diego-style', 'rtl', 'replace' );
-
+	
 	wp_enqueue_script( 'diego-navigation', get_template_directory_uri() . '/js/navigation.js', array(), DIEGO_VERSION, true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {

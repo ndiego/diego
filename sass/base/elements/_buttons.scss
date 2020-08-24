@@ -7,13 +7,13 @@ input[type="submit"] {
 	border-radius: $border__radius;
 	background: $color__background-button;
 	cursor: pointer;
+	font-family: $font__heavy;
 	font-size: 16px;
 	font-size: 1.6rem;
-	font-weight: 700;
 	letter-spacing: .07em;
 	line-height: 1;
 	outline: 0;
-	padding: 0.6em 1em 0.5em;
+	padding: 0.8em 1em 0.5em;
 	text-transform: uppercase;
 
 	&:hover {

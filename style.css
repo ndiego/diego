@@ -48,6 +48,24 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 	- Alignments
 
 --------------------------------------------------------------*/
+/* @import custom webfont (must be placed at the top of the stylesheet)
+--------------------------------------------- */
+@import url("//hello.myfonts.net/count/3c1b90");
+@font-face {
+	font-family: 'AvenirLTStd-Heavy';
+	src: url("webFonts/AvenirLTStd-Heavy/font.woff2") format("woff2"), url("webFonts/AvenirLTStd-Heavy/font.woff") format("woff");
+}
+
+@font-face {
+	font-family: 'AvenirLTStd-Book';
+	src: url("webFonts/AvenirLTStd-Book/font.woff2") format("woff2"), url("webFonts/AvenirLTStd-Book/font.woff") format("woff");
+}
+
+@font-face {
+	font-family: 'AvenirLTStd-Medium';
+	src: url("webFonts/AvenirLTStd-Medium/font.woff2") format("woff2"), url("webFonts/AvenirLTStd-Medium/font.woff") format("woff");
+}
+
 /*$color__background-main: #f0f1f2;*/
 /*--------------------------------------------------------------
 # Generic
@@ -194,7 +212,8 @@ abbr[title] {
  */
 b,
 strong {
-	font-weight: bolder;
+	font-family: "AvenirLTStd-Heavy", sans-serif;
+	font-weight: normal;
 }
 
 /**
@@ -503,10 +522,9 @@ select,
 optgroup,
 textarea {
 	color: #222;
-	font-family: "Avenir", "AvenirLTStd-Book", "Helvetica Neue", sans-serif;
+	font-family: "AvenirLTStd-Book", sans-serif;
 	font-size: 20px;
 	font-size: 2rem;
-	font-weight: 400;
 	line-height: 1.65;
 }
 
@@ -517,6 +535,7 @@ h4,
 h5,
 h6 {
 	clear: both;
+	font-family: "AvenirLTStd-Heavy", sans-serif;
 }
 
 p {
@@ -654,7 +673,9 @@ a:hover, a:active {
 	outline: 0;
 }
 
+.entry-header a,
 .entry-content a,
+.entry-footer a,
 .comment-author a,
 .comment-content a,
 .comment-form a,
@@ -663,12 +684,14 @@ a:hover, a:active {
 	color: #222;
 	border-bottom: 1px solid #f0f1f2;
 	box-shadow: inset 0 -1px 0 0 #f0f1f2;
-	font-weight: 900;
+	font-family: 'AvenirLTStd-Heavy', sans-serif;
 	position: relative;
 	text-decoration: none;
 }
 
+.entry-header a:after,
 .entry-content a:after,
+.entry-footer a:after,
 .comment-author a:after,
 .comment-content a:after,
 .comment-form a:after,
@@ -685,7 +708,9 @@ a:hover, a:active {
 	width: 0;
 }
 
+.entry-header a:hover:after,
 .entry-content a:hover:after,
+.entry-footer a:hover:after,
 .comment-author a:hover:after,
 .comment-content a:hover:after,
 .comment-form a:hover:after,
@@ -693,6 +718,44 @@ a:hover, a:active {
 .site-footer .footer-left a:hover:after {
 	visibility: visible;
 	width: 100%;
+}
+
+.pagination {
+	margin: 8rem auto;
+	text-align: center;
+	font-family: "AvenirLTStd-Heavy", sans-serif;
+}
+
+.pagination a,
+.pagination span {
+	background: #f0f1f2;
+	border-radius: 4px;
+	color: #222;
+	display: inline-block;
+	font-size: 1.4rem;
+	font-weight: 700;
+	letter-spacing: .08rem;
+	margin: 0 .2rem;
+	min-width: 3.5rem;
+	padding: .7rem 1rem 0.5rem;
+	text-align: center;
+	text-decoration: none;
+	text-transform: uppercase;
+}
+
+.pagination .prev,
+.pagination .next {
+	padding-left: 1.4rem;
+	padding-right: 1.4rem;
+}
+
+.pagination a:hover {
+	background: #c8ccd0;
+}
+
+.pagination span {
+	background: #222;
+	color: #fff;
 }
 
 /* Animations
@@ -723,13 +786,13 @@ input[type="submit"] {
 	border-radius: 4px;
 	background: #fff;
 	cursor: pointer;
+	font-family: "AvenirLTStd-Heavy", sans-serif;
 	font-size: 16px;
 	font-size: 1.6rem;
-	font-weight: 700;
 	letter-spacing: .07em;
 	line-height: 1;
 	outline: 0;
-	padding: 0.6em 1em 0.5em;
+	padding: 0.8em 1em 0.5em;
 	text-transform: uppercase;
 }
 
@@ -827,7 +890,7 @@ textarea {
 
 .site-branding .site-title a {
 	color: #222;
-	font-weight: 900;
+	font-family: "AvenirLTStd-Heavy", sans-serif;
 	letter-spacing: .07em;
 	text-decoration: none;
 	text-transform: uppercase;
@@ -904,9 +967,9 @@ textarea {
 .main-navigation a {
 	color: #222;
 	display: block;
+	font-family: "AvenirLTStd-Medium", sans-serif;
 	font-size: 16px;
 	font-size: 1.6rem;
-	font-weight: 500;
 	line-height: 1.75;
 	letter-spacing: -.01em;
 	opacity: .8;
@@ -1027,8 +1090,8 @@ textarea {
 }
 
 .title-container .entry-meta .posted-on {
+	font-family: "AvenirLTStd-Heavy", sans-serif;
 	font-size: 1.4rem;
-	font-weight: 900;
 	letter-spacing: .08em;
 	text-transform: uppercase;
 }
@@ -1058,11 +1121,25 @@ textarea {
 	margin-left: 10px;
 }
 
-.title-container .archive-title,
+.title-container .blog-title,
 .title-container .page-title,
 .title-container .entry-title {
 	font-size: 5rem;
 	margin: 0;
+}
+
+.title-container .archive-title {
+	font-size: 2rem;
+	letter-spacing: .08em;
+	text-transform: uppercase;
+}
+
+.title-container .archive-title span {
+	display: block;
+	font-size: 5rem;
+	line-height: 1.2;
+	margin-top: 1rem;
+	text-transform: none;
 }
 
 /* To accommodate featured image. */
@@ -1114,6 +1191,67 @@ textarea {
 	}
 }
 
+.archive .site-main,
+.blog .site-main,
+.home .site-main {
+	margin-top: 6rem;
+}
+
+@media screen and (max-width: 1075px) {
+	.archive .site-main,
+	.blog .site-main,
+	.home .site-main {
+		margin-top: 4rem;
+	}
+}
+
+.archive .site-main article,
+.blog .site-main article,
+.home .site-main article {
+	margin-bottom: 4rem;
+}
+
+.archive .site-main .page-content,
+.archive .site-main .entry-content,
+.archive .site-main .entry-summary,
+.blog .site-main .page-content,
+.blog .site-main .entry-content,
+.blog .site-main .entry-summary,
+.home .site-main .page-content,
+.home .site-main .entry-content,
+.home .site-main .entry-summary {
+	margin: 2rem 0 0;
+}
+
+@media screen and (max-width: 1075px) {
+	.archive .site-main .page-content,
+	.archive .site-main .entry-content,
+	.archive .site-main .entry-summary,
+	.blog .site-main .page-content,
+	.blog .site-main .entry-content,
+	.blog .site-main .entry-summary,
+	.home .site-main .page-content,
+	.home .site-main .entry-content,
+	.home .site-main .entry-summary {
+		margin: 2rem 0 0;
+	}
+}
+
+.archive .site-main .entry-header h2,
+.blog .site-main .entry-header h2,
+.home .site-main .entry-header h2 {
+	margin: 0;
+	font-size: 3.5rem;
+}
+
+.archive .site-main .entry-footer,
+.blog .site-main .entry-footer,
+.home .site-main .entry-footer {
+	font-size: 1.2rem;
+	margin-top: 0;
+	padding-top: 2rem;
+}
+
 .page-links {
 	clear: both;
 	margin: 0 0 1.5em;
@@ -1141,7 +1279,7 @@ textarea {
 
 .entry-content .intro {
 	font-size: 2.6rem;
-	font-weight: 900;
+	font-family: "AvenirLTStd-Heavy", sans-serif;
 	line-height: 1.5;
 	margin-bottom: 4rem;
 }
@@ -1149,9 +1287,56 @@ textarea {
 .entry-footer {
 	border-top: 1px solid #f0f1f2;
 	display: flex;
+	font-family: "AvenirLTStd-Heavy", sans-serif;
+	font-size: 1.4rem;
 	justify-content: space-between;
-	margin-top: 2em;
-	padding-top: 2em;
+	letter-spacing: .08em;
+	margin-top: 3rem;
+	padding-top: 3rem;
+	text-transform: uppercase;
+}
+
+.entry-footer .cat-links,
+.entry-footer .tags-links {
+	display: block;
+}
+
+.entry-footer .cat-links a,
+.entry-footer .tags-links a {
+	display: inline-block;
+	background: #f0f1f2;
+	border-bottom: 0;
+	border-radius: 4px;
+	box-shadow: none;
+	color: #222;
+	margin: 0 10px 10px 0;
+	padding: .4rem .8rem 0;
+	text-decoration: none;
+}
+
+.entry-footer .cat-links a:after,
+.entry-footer .tags-links a:after {
+	content: none;
+}
+
+.entry-footer .cat-links a:hover,
+.entry-footer .tags-links a:hover {
+	background: #c8ccd0;
+}
+
+.entry-footer .edit-link a {
+	border-bottom: 0;
+	box-shadow: none;
+	color: #222;
+	text-decoration: none;
+}
+
+.entry-footer .edit-link a:after {
+	content: none;
+}
+
+.entry-footer .edit-link a:hover {
+	color: #666;
 }
 
 /* Block specific styling
@@ -1228,8 +1413,8 @@ textarea {
 }
 
 .comment-metadata a {
+	font-family: "AvenirLTStd-Heavy", sans-serif;
 	font-size: 1.4rem;
-	font-weight: 700;
 	letter-spacing: .08em;
 	text-transform: uppercase;
 	color: #222;
@@ -1253,8 +1438,8 @@ textarea {
 }
 
 .comment-respond h3 a {
+	font-family: "AvenirLTStd-Heavy", sans-serif;
 	font-size: 1.4rem;
-	font-weight: 700;
 	letter-spacing: .08em;
 	text-transform: uppercase;
 	color: #222;
@@ -1266,12 +1451,12 @@ textarea {
 }
 
 .comment-respond label {
-	font-weight: 900;
+	font-family: "AvenirLTStd-Heavy", sans-serif;
 	min-width: 200px;
 }
 
 .comment-respond .comment-form-cookies-consent label {
-	font-weight: 400;
+	font-family: "AvenirLTStd-Book", sans-serif;
 	margin-left: .5rem;
 }
 
@@ -1281,6 +1466,12 @@ textarea {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
+}
+
+.comment-respond .comment-form-author b,
+.comment-respond .comment-form-email b,
+.comment-respond .comment-form-url b {
+	font-weight: normal;
 }
 
 .comment-respond .comment-form-author label,

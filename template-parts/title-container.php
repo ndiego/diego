@@ -15,7 +15,7 @@
         if ( is_home() ) :
             ?>
             <div>
-                <h1 class="archive-title"><?php single_post_title(); ?></h1>
+                <h1 class="blog-title"><?php single_post_title(); ?></h1>
             </div>
             <?php
         else :
