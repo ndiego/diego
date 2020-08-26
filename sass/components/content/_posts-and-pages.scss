@@ -142,3 +142,73 @@
 		}
 	}
 }
+
+
+
+/* Extra Stuff */
+.project {
+	&:not(.first) {
+		border-top: 1px solid #f0f1f2;
+		padding-top: 4rem;
+	}
+
+	
+	h2 {
+		font-size: 35px;
+		font-size: 3.5rem;
+		margin-bottom: 1rem;
+    	line-height: 1.2;
+	}
+	
+	p {
+		font-size: 18px;
+		font-size: 1.8rem;
+	}
+	
+	.project-status {
+		margin-bottom: 3rem;
+		
+		.status {
+			display: inline-block;
+			background: #f0f1f2;
+			border-radius: $border__radius;
+			color: $color__text-main;
+			font-family: $font__heavy;
+			font-size: 1.2rem;
+			letter-spacing: .08em;
+			margin-right: 15px;
+			padding: .6rem 1rem .2rem;
+			text-transform: uppercase;
+		}
+		
+		.development {
+			background: #c7f1d3;
+		}
+	}
+	
+	.project-meta {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		font-size: 14px;
+		font-size: 1.4rem;
+	    font-family: "AvenirLTStd-Heavy", sans-serif;
+	    text-transform: uppercase;
+	    letter-spacing: .08em;
+	    margin: 0 0 3rem;
+		
+		.downloads {
+			line-height: 1.8;
+				
+			.dashicons {
+				color: $color__dark-grey;
+			}
+		}
+		
+		.rating {
+			color: $color__stars;
+		}
+	}
+}
+
+

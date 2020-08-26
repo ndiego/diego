@@ -681,6 +681,17 @@ a:hover, a:active {
 .comment-form a,
 .comment-body .reply a,
 .site-footer .footer-left a {
+	/* Fix for the button block */
+}
+
+.entry-header a:not(.wp-block-button__link),
+.entry-content a:not(.wp-block-button__link),
+.entry-footer a:not(.wp-block-button__link),
+.comment-author a:not(.wp-block-button__link),
+.comment-content a:not(.wp-block-button__link),
+.comment-form a:not(.wp-block-button__link),
+.comment-body .reply a:not(.wp-block-button__link),
+.site-footer .footer-left a:not(.wp-block-button__link) {
 	color: #222;
 	border-bottom: 1px solid #f0f1f2;
 	box-shadow: inset 0 -1px 0 0 #f0f1f2;
@@ -689,14 +700,14 @@ a:hover, a:active {
 	text-decoration: none;
 }
 
-.entry-header a:after,
-.entry-content a:after,
-.entry-footer a:after,
-.comment-author a:after,
-.comment-content a:after,
-.comment-form a:after,
-.comment-body .reply a:after,
-.site-footer .footer-left a:after {
+.entry-header a:not(.wp-block-button__link):after,
+.entry-content a:not(.wp-block-button__link):after,
+.entry-footer a:not(.wp-block-button__link):after,
+.comment-author a:not(.wp-block-button__link):after,
+.comment-content a:not(.wp-block-button__link):after,
+.comment-form a:not(.wp-block-button__link):after,
+.comment-body .reply a:not(.wp-block-button__link):after,
+.site-footer .footer-left a:not(.wp-block-button__link):after {
 	background-color: #222;
 	bottom: -1px;
 	content: "";
@@ -708,14 +719,14 @@ a:hover, a:active {
 	width: 0;
 }
 
-.entry-header a:hover:after,
-.entry-content a:hover:after,
-.entry-footer a:hover:after,
-.comment-author a:hover:after,
-.comment-content a:hover:after,
-.comment-form a:hover:after,
-.comment-body .reply a:hover:after,
-.site-footer .footer-left a:hover:after {
+.entry-header a:not(.wp-block-button__link):hover:after,
+.entry-content a:not(.wp-block-button__link):hover:after,
+.entry-footer a:not(.wp-block-button__link):hover:after,
+.comment-author a:not(.wp-block-button__link):hover:after,
+.comment-content a:not(.wp-block-button__link):hover:after,
+.comment-form a:not(.wp-block-button__link):hover:after,
+.comment-body .reply a:not(.wp-block-button__link):hover:after,
+.site-footer .footer-left a:not(.wp-block-button__link):hover:after {
 	visibility: visible;
 	width: 100%;
 }
@@ -731,9 +742,9 @@ a:hover, a:active {
 	background: #f0f1f2;
 	border-radius: 4px;
 	color: #222;
+	font-weight: "AvenirLTStd-Heavy", sans-serif;
 	display: inline-block;
 	font-size: 1.4rem;
-	font-weight: 700;
 	letter-spacing: .08rem;
 	margin: 0 .2rem;
 	min-width: 3.5rem;
@@ -780,28 +791,32 @@ button.dashicons-before:before {
 button,
 input[type="button"],
 input[type="reset"],
-input[type="submit"] {
+input[type="submit"],
+.wp-block-button__link {
 	border: 2px solid;
 	border-color: #222;
 	border-radius: 4px;
 	background: #fff;
+	color: #222;
 	cursor: pointer;
 	font-family: "AvenirLTStd-Heavy", sans-serif;
 	font-size: 16px;
 	font-size: 1.6rem;
-	letter-spacing: .07em;
+	letter-spacing: .08em;
 	line-height: 1;
 	outline: 0;
-	padding: 0.8em 1em 0.5em;
+	padding: 1em 1.2em .7em;
 	text-transform: uppercase;
 }
 
 button:hover,
 input[type="button"]:hover,
 input[type="reset"]:hover,
-input[type="submit"]:hover {
-	background: #222;
-	color: #fff;
+input[type="submit"]:hover,
+.wp-block-button__link:hover {
+	background: #222 !important;
+	color: #fff !important;
+	border-color: #222 !important;
 }
 
 input[type="text"],
@@ -1337,6 +1352,69 @@ textarea {
 
 .entry-footer .edit-link a:hover {
 	color: #666;
+}
+
+/* Extra Stuff */
+.project:not(.first) {
+	border-top: 1px solid #f0f1f2;
+	padding-top: 4rem;
+}
+
+.project h2 {
+	font-size: 35px;
+	font-size: 3.5rem;
+	margin-bottom: 1rem;
+	line-height: 1.2;
+}
+
+.project p {
+	font-size: 18px;
+	font-size: 1.8rem;
+}
+
+.project .project-status {
+	margin-bottom: 3rem;
+}
+
+.project .project-status .status {
+	display: inline-block;
+	background: #f0f1f2;
+	border-radius: 4px;
+	color: #222;
+	font-family: "AvenirLTStd-Heavy", sans-serif;
+	font-size: 1.2rem;
+	letter-spacing: .08em;
+	margin-right: 15px;
+	padding: .6rem 1rem .2rem;
+	text-transform: uppercase;
+}
+
+.project .project-status .development {
+	background: #c7f1d3;
+}
+
+.project .project-meta {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	font-size: 14px;
+	font-size: 1.4rem;
+	font-family: "AvenirLTStd-Heavy", sans-serif;
+	text-transform: uppercase;
+	letter-spacing: .08em;
+	margin: 0 0 3rem;
+}
+
+.project .project-meta .downloads {
+	line-height: 1.8;
+}
+
+.project .project-meta .downloads .dashicons {
+	color: #9199a1;
+}
+
+.project .project-meta .rating {
+	color: #ffb900;
 }
 
 /* Block specific styling
