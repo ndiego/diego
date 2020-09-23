@@ -207,3 +207,17 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 if ( class_exists( 'WooCommerce' ) ) {
 	require get_template_directory() . '/inc/woocommerce.php';
 }
+
+
+/* Block Editor Specific Styles */
+add_theme_support( 'editor-styles' );
+
+add_editor_style( 'style-editor.css' );
+
+add_theme_support( 'editor-color-palette', array(
+    array(
+        'name' => __( 'very dark gray', 'themeLangDomain' ),
+        'slug' => 'very-dark-gray',
+        'color' => '#222',
+    ),
+) );

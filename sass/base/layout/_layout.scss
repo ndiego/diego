@@ -23,8 +23,8 @@
     margin: 4rem -10vw;
     
     @media screen and ( max-width: $breakpoint__tablet ) {
-        width: 100vw;
-        margin: 4rem calc(50% - 50vw);
+        width: 100%;
+        margin: 4rem 0;
     }
     
     &.no-margin {

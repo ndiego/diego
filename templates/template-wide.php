@@ -1,13 +1,13 @@
 <?php
 /**
-* Template Name: Full Width Page
+* Template Name: Wide Page
 *
 * @package diego
 */
 
 get_header();
 ?>
-	<div class="site-inner full-width">
+	<div class="site-inner wide">
 		
 		<?php
 			if ( ! is_front_page() ) :

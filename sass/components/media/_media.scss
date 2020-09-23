@@ -11,3 +11,14 @@
 .custom-logo-link {
 	display: inline-block;
 }
+
+figure {
+	&.box-shadow {
+		img {
+			box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+			border-radius: 4px;
+		}
+	}
+
+}
+

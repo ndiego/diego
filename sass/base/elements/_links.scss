@@ -30,32 +30,29 @@ a {
 .comment-body .reply,
 .site-footer .footer-left {
 	a {
-		/* Fix for the button block */
-		&:not( .wp-block-button__link ) {
-			color: $color__text-main;
-			border-bottom: 1px solid $color__link-border;
-			box-shadow: inset 0 -1px 0 0 $color__link-border;
-			font-family: 'AvenirLTStd-Heavy', sans-serif;
-			position: relative;
-			text-decoration: none;
-			
+		color: $color__text-main;
+		border-bottom: 1px solid $color__link-border;
+		box-shadow: inset 0 -1px 0 0 $color__link-border;
+		font-family: 'AvenirLTStd-Heavy', sans-serif;
+		position: relative;
+		text-decoration: none;
+		
+		&:after {
+			background-color: #222;
+			bottom: -1px;
+			content: "";
+			height: 2px;
+			left: 0;
+			position: absolute;
+			transition: all 0.3s ease-in-out;
+			visibility: hidden;
+			width: 0;
+		}
+		
+		&:hover {
 			&:after {
-				background-color: #222;
-				bottom: -1px;
-				content: "";
-				height: 2px;
-				left: 0;
-				position: absolute;
-				transition: all 0.3s ease-in-out;
-				visibility: hidden;
-				width: 0;
-			}
-			
-			&:hover {
-				&:after {
-					visibility: visible;
-					width: 100%;
-				}
+				visibility: visible;
+				width: 100%;
 			}
 		}
 		

@@ -2,7 +2,8 @@ button,
 input[type="button"],
 input[type="reset"],
 input[type="submit"],
-.wp-block-button__link {
+.wp-block-button__link,
+.button {
 	border: 2px solid;
 	border-color: $color__border-button;
 	border-radius: $border__radius;
@@ -26,5 +27,27 @@ input[type="submit"],
 
 	&:active,
 	&:focus {
+	}
+}
+
+.entry-content {
+	.button,
+	.wp-block-button__link {
+		border-bottom: 2px solid $color__text-main;
+		box-shadow: none;
+		
+		&:after {
+			content: none;
+		}
+	}
+	
+	.button-alt {
+		background-color: $color__text-main;
+		color: #fff;
+		
+		&:hover {
+			background-color: #fff !important;
+			color: $color__text-main !important;
+		}
 	}
 }

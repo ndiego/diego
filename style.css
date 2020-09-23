@@ -10,7 +10,7 @@ Requires PHP: 5.6
 License: GNU General Public License v2 or later
 License URI: LICENSE
 Text Domain: diego
-Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-comments, translation-ready
+GitHub Theme URI: ndiego/diego
 
 This theme, like WordPress, is licensed under the GPL.
 Use it to make something cool, have fun, and share what you've learned.
@@ -489,8 +489,8 @@ html {
 
 @media screen and (max-width: 1075px) {
 	.entry-content .alignwide {
-		width: 100vw;
-		margin: 4rem calc(50% - 50vw);
+		width: 100%;
+		margin: 4rem 0;
 	}
 }
 
@@ -536,6 +536,7 @@ h5,
 h6 {
 	clear: both;
 	font-family: "AvenirLTStd-Heavy", sans-serif;
+	font-weight: normal;
 }
 
 p {
@@ -681,17 +682,6 @@ a:hover, a:active {
 .comment-form a,
 .comment-body .reply a,
 .site-footer .footer-left a {
-	/* Fix for the button block */
-}
-
-.entry-header a:not(.wp-block-button__link),
-.entry-content a:not(.wp-block-button__link),
-.entry-footer a:not(.wp-block-button__link),
-.comment-author a:not(.wp-block-button__link),
-.comment-content a:not(.wp-block-button__link),
-.comment-form a:not(.wp-block-button__link),
-.comment-body .reply a:not(.wp-block-button__link),
-.site-footer .footer-left a:not(.wp-block-button__link) {
 	color: #222;
 	border-bottom: 1px solid #f0f1f2;
 	box-shadow: inset 0 -1px 0 0 #f0f1f2;
@@ -700,14 +690,14 @@ a:hover, a:active {
 	text-decoration: none;
 }
 
-.entry-header a:not(.wp-block-button__link):after,
-.entry-content a:not(.wp-block-button__link):after,
-.entry-footer a:not(.wp-block-button__link):after,
-.comment-author a:not(.wp-block-button__link):after,
-.comment-content a:not(.wp-block-button__link):after,
-.comment-form a:not(.wp-block-button__link):after,
-.comment-body .reply a:not(.wp-block-button__link):after,
-.site-footer .footer-left a:not(.wp-block-button__link):after {
+.entry-header a:after,
+.entry-content a:after,
+.entry-footer a:after,
+.comment-author a:after,
+.comment-content a:after,
+.comment-form a:after,
+.comment-body .reply a:after,
+.site-footer .footer-left a:after {
 	background-color: #222;
 	bottom: -1px;
 	content: "";
@@ -719,14 +709,14 @@ a:hover, a:active {
 	width: 0;
 }
 
-.entry-header a:not(.wp-block-button__link):hover:after,
-.entry-content a:not(.wp-block-button__link):hover:after,
-.entry-footer a:not(.wp-block-button__link):hover:after,
-.comment-author a:not(.wp-block-button__link):hover:after,
-.comment-content a:not(.wp-block-button__link):hover:after,
-.comment-form a:not(.wp-block-button__link):hover:after,
-.comment-body .reply a:not(.wp-block-button__link):hover:after,
-.site-footer .footer-left a:not(.wp-block-button__link):hover:after {
+.entry-header a:hover:after,
+.entry-content a:hover:after,
+.entry-footer a:hover:after,
+.comment-author a:hover:after,
+.comment-content a:hover:after,
+.comment-form a:hover:after,
+.comment-body .reply a:hover:after,
+.site-footer .footer-left a:hover:after {
 	visibility: visible;
 	width: 100%;
 }
@@ -792,7 +782,8 @@ button,
 input[type="button"],
 input[type="reset"],
 input[type="submit"],
-.wp-block-button__link {
+.wp-block-button__link,
+.button {
 	border: 2px solid;
 	border-color: #222;
 	border-radius: 4px;
@@ -813,10 +804,32 @@ button:hover,
 input[type="button"]:hover,
 input[type="reset"]:hover,
 input[type="submit"]:hover,
-.wp-block-button__link:hover {
+.wp-block-button__link:hover,
+.button:hover {
 	background: #222 !important;
 	color: #fff !important;
 	border-color: #222 !important;
+}
+
+.entry-content .button,
+.entry-content .wp-block-button__link {
+	border-bottom: 2px solid #222;
+	box-shadow: none;
+}
+
+.entry-content .button:after,
+.entry-content .wp-block-button__link:after {
+	content: none;
+}
+
+.entry-content .button-alt {
+	background-color: #222;
+	color: #fff;
+}
+
+.entry-content .button-alt:hover {
+	background-color: #fff !important;
+	color: #222 !important;
 }
 
 input[type="text"],
@@ -997,7 +1010,7 @@ textarea {
 .main-navigation .current_page_ancestor > a,
 .main-navigation .current-menu-ancestor > a {
 	color: #222;
-	font-weight: 700;
+	font-family: "AvenirLTStd-Heavy", sans-serif;
 }
 
 .main-navigation ul {
@@ -1279,6 +1292,11 @@ textarea {
 	max-width: 736px;
 }
 
+.wide .site-main .hentry,
+.wide .site-main .comments-area {
+	max-width: 928px;
+}
+
 .hentry .post-thumbnail {
 	line-height: 0;
 	margin-top: -2em;
@@ -1357,19 +1375,41 @@ textarea {
 /* Extra Stuff */
 .project:not(.first) {
 	border-top: 1px solid #f0f1f2;
-	padding-top: 4rem;
+	padding: 4rem 0 3rem;
 }
 
 .project h2 {
-	font-size: 35px;
-	font-size: 3.5rem;
+	font-size: 40px;
+	font-size: 4rem;
 	margin-bottom: 1rem;
 	line-height: 1.2;
+}
+
+@media screen and (max-width: 600px) {
+	.project h2 {
+		font-size: 30px;
+		font-size: 3rem;
+	}
 }
 
 .project p {
 	font-size: 18px;
 	font-size: 1.8rem;
+}
+
+.project:not(.alignwide) .wp-block-column {
+	display: flex;
+	flex-direction: column;
+}
+
+.project:not(.alignwide) p {
+	flex-grow: 1;
+}
+
+.project:not(.alignwide) h2 {
+	margin-top: 1rem;
+	font-size: 30px;
+	font-size: 3rem;
 }
 
 .project .project-status {
@@ -1391,6 +1431,22 @@ textarea {
 
 .project .project-status .development {
 	background: #c7f1d3;
+	color: #19a06f;
+}
+
+.project .project-status .supported {
+	background: #caeeff;
+	color: #14aaf5;
+}
+
+.project .project-status .critical-support {
+	background: #ffe4dd;
+	color: #fb7171;
+}
+
+.project .project-status .premium {
+	background: #edd8ff;
+	color: #bb7bff;
 }
 
 .project .project-meta {
@@ -1417,6 +1473,22 @@ textarea {
 	color: #ffb900;
 }
 
+.project .project-links a {
+	margin-right: 2rem;
+	font-size: 1.4rem;
+	white-space: nowrap;
+	display: inline-block;
+	margin-bottom: 10px;
+}
+
+@media screen and (max-width: 600px) {
+	.project:not(.alignwide) .wp-block-column:first-child {
+		padding-bottom: 5rem;
+		border-bottom: 1px solid #f0f1f2;
+		margin-bottom: 4rem;
+	}
+}
+
 /* Block specific styling
 --------------------------------------------- */
 /* Core Image Block */
@@ -1432,6 +1504,17 @@ textarea {
 
 .wp-block-image.alignfull figcaption {
 	margin: 1rem 2rem;
+}
+
+/* Core Columns Block */
+@media (min-width: 782px) {
+	.wide .entry-content .wp-block-column:not(:first-child) {
+		margin-left: 64px;
+	}
+}
+
+.wp-block-columns {
+	margin-bottom: 2rem;
 }
 
 /* Comments
@@ -1609,6 +1692,11 @@ textarea {
 /* Make sure logo link wraps around logo image. */
 .custom-logo-link {
 	display: inline-block;
+}
+
+figure.box-shadow img {
+	box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+	border-radius: 4px;
 }
 
 /* Captions

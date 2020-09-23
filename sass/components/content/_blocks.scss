@@ -15,3 +15,22 @@
     }
 }
 
+
+/* Core Columns Block */
+
+.wide {
+    .entry-content {
+        .wp-block-column {
+            @media (min-width: 782px) {
+                &:not(:first-child) {
+                    margin-left: 64px;
+                }
+            }
+        }
+    }
+}
+
+.wp-block-columns {
+    margin-bottom: 2rem;
+}
+
