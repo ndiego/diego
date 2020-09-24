@@ -681,7 +681,8 @@ a:hover, a:active {
 .comment-content a,
 .comment-form a,
 .comment-body .reply a,
-.site-footer .footer-left a {
+.site-footer .footer-left a,
+.widget-area a {
 	color: #222;
 	border-bottom: 1px solid #f0f1f2;
 	box-shadow: inset 0 -1px 0 0 #f0f1f2;
@@ -697,7 +698,8 @@ a:hover, a:active {
 .comment-content a:after,
 .comment-form a:after,
 .comment-body .reply a:after,
-.site-footer .footer-left a:after {
+.site-footer .footer-left a:after,
+.widget-area a:after {
 	background-color: #222;
 	bottom: -1px;
 	content: "";
@@ -716,7 +718,8 @@ a:hover, a:active {
 .comment-content a:hover:after,
 .comment-form a:hover:after,
 .comment-body .reply a:hover:after,
-.site-footer .footer-left a:hover:after {
+.site-footer .footer-left a:hover:after,
+.widget-area a:hover:after {
 	visibility: visible;
 	width: 100%;
 }
@@ -909,17 +912,19 @@ textarea {
 .site-branding {
 	float: left;
 	padding: 0;
-	width: 162px;
+	width: 180px;
 }
 
 .site-branding .site-title {
 	margin: 7px 0 6px;
+	font-size: 24px;
+	font-size: 2.4rem;
 }
 
 .site-branding .site-title a {
 	color: #222;
 	font-family: "AvenirLTStd-Heavy", sans-serif;
-	letter-spacing: .07em;
+	letter-spacing: .05em;
 	text-decoration: none;
 	text-transform: uppercase;
 }
@@ -996,8 +1001,8 @@ textarea {
 	color: #222;
 	display: block;
 	font-family: "AvenirLTStd-Medium", sans-serif;
-	font-size: 16px;
-	font-size: 1.6rem;
+	font-size: 18px;
+	font-size: 1.8rem;
 	line-height: 1.75;
 	letter-spacing: -.01em;
 	opacity: .8;
@@ -1248,7 +1253,7 @@ textarea {
 .home .site-main .page-content,
 .home .site-main .entry-content,
 .home .site-main .entry-summary {
-	margin: 2rem 0 0;
+	margin: 1.8rem 0 0;
 }
 
 @media screen and (max-width: 1075px) {
@@ -1261,7 +1266,7 @@ textarea {
 	.home .site-main .page-content,
 	.home .site-main .entry-content,
 	.home .site-main .entry-summary {
-		margin: 2rem 0 0;
+		margin: 1.8rem 0 0;
 	}
 }
 
@@ -1515,6 +1520,39 @@ textarea {
 
 .wp-block-columns {
 	margin-bottom: 2rem;
+}
+
+/* Core Latest Posts Block */
+.wp-block-latest-posts {
+	margin: 0;
+	padding: 0;
+}
+
+.wp-block-latest-posts li {
+	border-top: 1px solid #f0f1f2;
+	padding: 30px 0 35px;
+	padding: 3rem 0 3.5rem;
+}
+
+.wp-block-latest-posts li:first-child {
+	border-top: none;
+}
+
+.wp-block-latest-posts li a:first-child {
+	font-size: 30px;
+}
+
+.wp-block-latest-posts li time {
+	color: #222;
+	font-family: "AvenirLTStd-Heavy", sans-serif;
+	font-size: 1.2rem;
+	letter-spacing: .08em;
+	margin: 6px 0 20px;
+	text-transform: uppercase;
+}
+
+.wp-block-latest-posts li .wp-block-latest-posts__post-excerpt {
+	margin: 0;
 }
 
 /* Comments
@@ -1783,7 +1821,7 @@ figure.box-shadow img {
 }
 
 .site-footer p {
-	margin: 0;
+	margin: 0 0 5px;
 }
 
 .site-footer .footer-widget > div {
