@@ -31,6 +31,16 @@ h6 {
 	font-weight: normal;
 }
 
+b, strong {
+    font-family: "AvenirLTStd-Heavy", sans-serif;
+    font-weight: normal;
+}
+
+/* Custom font classes */
+.intro {
+	font-family: 'AvenirLTStd-Heavy', sans-serif;
+}
+
 
 /* Main column width */
 .wp-block {
@@ -52,7 +62,7 @@ h6 {
     border: 2px solid;
     border-color: #222;
     border-radius: 4px;
-    background: #fff;
+    background: transparent;
     color: #222;
     cursor: pointer;
     font-family: 'AvenirLTStd-Heavy', sans-serif;

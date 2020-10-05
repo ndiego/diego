@@ -25,7 +25,13 @@ get_header();
 		<div class="content-sidebar-wrap">
 			<main id="primary" class="site-main">
 				<?php
+				
 				if ( have_posts() ) :
+					
+					/* Print the tags list at the top of the blog homepage */
+					if ( is_home() ) {
+						diego_fitler_tags_component();
+					}
 
 					/* Start the Loop */
 					while ( have_posts() ) :

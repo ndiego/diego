@@ -6,28 +6,42 @@
 	display: none;
 }
 
+.has-post-thumbnail {
+	.page-content,
+	.entry-content,
+	.entry-summary {
+		margin: 6rem 0 0;
+	}
+}
+
 .page-content,
 .entry-content,
 .entry-summary {
-	margin: 6rem 0 0;
+	margin: 8rem 0 0;
 	
 	@media screen and ( max-width: $breakpoint__tablet ) {
 		margin: 4rem 0 0;
 	}
 }
 
+.home {
+	.entry-content {
+		margin-top: 0;
+	}
+}
+
 .archive,
 .blog,
-.home {
+.search {
 	.site-main {
-		margin-top: 6rem;
+		margin-top: 8rem;
 		
 		@media screen and ( max-width: $breakpoint__tablet ) {
 			margin-top: 4rem;
 		}
 		
 		article {
-			margin-bottom: 4rem;
+			margin-bottom: 6rem;
 		}
 		
 		.page-content,
@@ -41,9 +55,44 @@
 		}
 		
 		.entry-header {
+			display: flex;
+			justify-content: space-between;
+			
 			h2 {
 				margin: 0;
 				font-size: 3.5rem;
+			}
+			
+			.post-type {
+				display: inline-block;
+				background: #f0f1f2;
+				border-radius: $border__radius;
+				color: #8c8c8c;
+				font-family: $font__heavy;
+				font-size: 1.2rem;
+				height: 100%;
+				letter-spacing: .08em;
+				margin-top: 10px;
+				padding: .6rem 1rem .2rem;
+				text-transform: uppercase;
+				
+				&.post {
+					background: #d7e8dc;
+					color: #648a7c;
+				}
+				&.page {
+					background: #d6e8fb;
+					color: #5b87b7;
+				}
+				
+				.critical-support {
+					background: #fbdcd4;
+					color: #bf6969;
+				}
+				.premium {
+					background: #dbc7ec;
+					color: #8960b5;
+				}
 			}
 		}
 		
@@ -60,6 +109,7 @@
 	margin: 0 0 1.5em;
 }
 
+.site-main .filter-by-tags,
 .site-main .hentry,  
 .site-main .comments-area {
 	margin-right: auto;
@@ -68,6 +118,7 @@
 }
 
 .wide {
+	.site-main .filter-by-tags,
 	.site-main .hentry,  
 	.site-main .comments-area {
 		max-width: 928px;
@@ -107,31 +158,6 @@
     padding-top: 3rem;
 	text-transform: uppercase;
 	
-	.cat-links,
-	.tags-links {
-		display: block;
-		
-		a {
-			display: inline-block;
-		    background: #f0f1f2;
-			border-bottom: 0;
-			border-radius: $border__radius;
-			box-shadow: none;
-			color: $color__text-main;
-			margin: 0 10px 10px 0;
-			padding: .4rem .8rem 0;
-			text-decoration: none;
-
-			&:after {
-				content: none;
-			}
-			
-			&:hover {
-				background: $color__link-tag-hover;
-			}
-		}
-	}
-	
 	.edit-link {
 		a {
 			border-bottom: 0;
@@ -150,10 +176,44 @@
 	}
 }
 
+.cat-links,
+.tags-links {
+	display: block;
+	font-family: $font__heavy;
+	letter-spacing: .08em;
+    text-transform: uppercase;
+	
+	a {
+		display: inline-block;
+		background: #f0f1f2;
+		border-bottom: 0;
+		border-radius: $border__radius;
+		box-shadow: none;
+		color: #8c8c8c;
+		margin: 0 10px 10px 0;
+		padding: .6rem 1rem .2rem;
+		text-decoration: none;
+
+		&:after {
+			content: none;
+		}
+		
+		&:hover {
+			background: $color__link-tag-hover;
+			color: $color__text-main;
+		}
+	}
+}
+
 
 
 /* Extra Stuff */
 .project {
+	&.first {
+		margin-top: 8rem;
+		margin-bottom: 8rem;
+	}
+	
 	&:not(.first) {
 		border-top: 1px solid #f0f1f2;
 		padding: 4rem 0 3rem;
@@ -201,7 +261,7 @@
 			display: inline-block;
 			background: #f0f1f2;
 			border-radius: $border__radius;
-			color: $color__text-main;
+			color: #8c8c8c;
 			font-family: $font__heavy;
 			font-size: 1.2rem;
 			letter-spacing: .08em;
@@ -211,20 +271,20 @@
 		}
 		
 		.development {
-			background: #c7f1d3;
-			color: #19a06f; 
+			background: #d7e8dc;
+    		color: #648a7c;
 		}
 		.supported {
-			background: #caeeff;
-			color: #14aaf5;
+			background: #d6e8fb;
+			color: #5b87b7;
 		}
 		.critical-support {
-			background: #ffe4dd;
-			color: #fb7171;
+			background: #fbdcd4;
+			color: #bf6969;
 		}
 		.premium {
-			background: #edd8ff;
-			color: #bb7bff;
+			background: #dbc7ec;
+    		color: #8960b5;
 		}
 	}
 	
@@ -273,6 +333,58 @@
 			}
 		}
 	}
+}
+
+/* Filter by tags component */
+.filter-by-tags {
+	margin-bottom: 6rem;
+	
+	label {
+		display: block;
+		font-size: 1.6rem;
+		font-family: $font__heavy;
+    	letter-spacing: .08em;
+		margin-bottom: 1rem;
+    	text-transform: uppercase;
+	}
+	
+	.tags-links {
+		font-size: 1.4rem;
+	}
+}
+
+/* 404 Page Specific */
+.error-404 {
+	padding: 100px 0 160px;
+	padding: 10rem 0 16rem;
+    text-align: center;
+	
+	.page-header {
+		.error-code {
+			font-size: 120px;
+			font-size: 12rem;
+    		font-family: "AvenirLTStd-Heavy", sans-serif;
+		}
+		.page-title {
+			margin: 0;
+		}
+	}
+	
+	.page-content {
+		margin: 20px 0 0;
+		margin: 2rem 0 0;
+		
+		.search-form {
+			margin-top: 60px;
+			margin-top: 6rem;
+		}
+	}
+}
+
+
+/* More lInk */
+.more-link {
+	white-space: nowrap;
 }
 
 

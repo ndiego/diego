@@ -1,0 +1,19 @@
+/* Jetpack Forms */
+.wp-block-jetpack-contact-form {
+    margin-top: 80px;
+    margin-top: 8rem;
+    
+    @media screen and ( max-width: $breakpoint__tablet ) {
+        margin-top: 4rem;
+    }
+    
+    label {
+        font-family: $font__heavy;
+        min-width: 200px;
+        
+        span {
+            font-family: $font__main;        
+        }
+    }
+} 
+    

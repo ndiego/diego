@@ -35,10 +35,8 @@
 
 /* Core Latest Posts Block */
 .wp-block-latest-posts {
-    margin: 0;
+    margin: 0 0 2rem;
     padding: 0;
-    
-    
     
     li {
         border-top: 1px solid #f0f1f2;
@@ -51,6 +49,12 @@
         
         a:first-child {
             font-size: 30px;
+            font-size: 3rem;
+            
+            &.more-link {
+                font-size: 20px;
+                font-size: 2rem;
+            }
         }
         
         time {
@@ -66,4 +70,59 @@
             margin: 0;
         }
     }
+}
+
+/* Cover block */
+.wp-block-cover-image,
+.wp-block-cover {
+    &.home-bio {
+        margin-top: 0;
+        margin-bottom: 10rem;
+        padding: 12rem 0 10rem;
+        
+        @media screen and ( max-width: $breakpoint__tablet ) {
+            margin-bottom: 6rem;
+            padding: 6rem 0;
+        }
+        
+        h1 {
+            font-size: 3em;
+            margin: 0 0 1rem;
+            
+            @media screen and ( max-width: $breakpoint__tablet ) {
+                font-size: 2.5em;
+            }
+        }
+        
+        .wp-block-cover__inner-container {
+            max-width: 980px;
+            width: calc(100% - 70px);
+            z-index: 1;
+            
+            @media screen and ( max-width: $breakpoint__tablet ) {
+                width: 100%;
+                padding-right: 5%;
+                padding-left: 5%;
+            }
+        }
+        
+        .wp-block-columns {
+            .wp-block-column {
+                &:first-child {
+                    padding-right: 4rem;
+                    
+                    @media screen and ( max-width: $breakpoint__tablet ) {
+                        padding-right: 0;
+                    }
+                }
+            }
+        }
+        
+        .wp-block-image {
+            @media screen and ( max-width: $breakpoint__mobile ) {
+                max-width: 75%;
+                margin: 6rem auto 1em;
+            }
+        }
+    } 
 }

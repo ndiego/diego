@@ -7,7 +7,7 @@ input[type="submit"],
 	border: 2px solid;
 	border-color: $color__border-button;
 	border-radius: $border__radius;
-	background: $color__background-button;
+	background: transparent;
 	color: $color__text-main;
 	cursor: pointer;
 	font-family: $font__heavy;
@@ -27,6 +27,10 @@ input[type="submit"],
 
 	&:active,
 	&:focus {
+	}
+	
+	&:visited {
+		color: $color__text-main;
 	}
 }
 

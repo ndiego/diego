@@ -26,6 +26,11 @@ textarea {
 	}
 }
 
+input[type="search"] {
+	padding: .8rem 1rem .5rem;
+	margin-right: 5px;
+}
+
 select {
 	border: 1px solid $color__border-input;
 }

@@ -148,6 +148,18 @@ function diego_widgets_init() {
 			'after_title'   => '',
 		)
 	);
+	
+	register_sidebar(
+		array(
+			'name'          => esc_html__( 'Blog Header', 'diego' ),
+			'id'            => 'blog-header',
+			'description'   => esc_html__( 'Add widgets here.', 'diego' ),
+			'before_widget' => '<section id="%1$s" class="blog-header-widget widget %2$s">',
+			'after_widget'  => '</section>',
+			'before_title'  => '',
+			'after_title'   => '',
+		)
+	);
 }
 add_action( 'widgets_init', 'diego_widgets_init' );
 
@@ -221,3 +233,17 @@ add_theme_support( 'editor-color-palette', array(
         'color' => '#222',
     ),
 ) );
+
+/* Create a custom read more link */
+function diego_excerpt_more( $more ) {
+	//if ( is_front_page() ) {
+		return sprintf( ' … <a href="%1$s" class="more-link">%2$s</a>',
+			  esc_url( get_permalink( get_the_ID() ) ),
+			  sprintf( __( 'Continue reading &rarr; %s', 'wpdocs' ), '<span class="screen-reader-text">' . get_the_title( get_the_ID() ) . '</span>' )
+		);
+	//} else {
+		//return ' …';
+	//}
+}
+add_filter( 'excerpt_more', 'diego_excerpt_more' );
+

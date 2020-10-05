@@ -52,6 +52,7 @@
         }
     }
     
+    .archive-title,
     .blog-title,
     .page-title,
     .entry-title {
@@ -67,10 +68,16 @@
         span {
             display: block;
             font-size: 5rem;
-            line-height: 1.2;
-            margin-top: 1rem;
             text-transform: none;
         }
+    }
+    
+    .widget {
+        margin: 0;
+    }
+    
+    p {
+        margin-top: 1rem;
     }
 }
 

@@ -11,28 +11,22 @@ get_header();
 ?>
 	<div class="site-inner">
 
-		<?php
-			if ( ! is_front_page() ) :
-				get_template_part( 'template-parts/title-container' );
-			endif;	
-		?>
-
 		<div class="content-sidebar-wrap">
 			<main id="primary" class="site-main">
 				<section class="error-404 not-found">
 					<header class="page-header">
-						<h1 class="page-title"><?php esc_html_e( 'Oops! That page can&rsquo;t be found.', 'diego' ); ?></h1>
+						<span class="error-code">404</span>
+						<h1 class="page-title"><?php esc_html_e( 'Oh no… I can\'t find that page.', 'diego' ); ?></h1>
 					</header><!-- .page-header -->
 
 					<div class="page-content">
-						<p><?php esc_html_e( 'It looks like nothing was found at this location. Maybe try one of the links below or a search?', 'diego' ); ?></p>
-
+						<p><?php esc_html_e( 'Try returning to the homepage or use the search field below.', 'diego' ); ?></p>
+						<?php
+							get_search_form();
+						?>
 					</div><!-- .page-content -->
 				</section><!-- .error-404 -->
 			</main><!-- #main -->
-			<?php
-				get_sidebar();
-			?>
 		</div><!-- .content-sidebar-wrap -->
 	</div><!-- .site-inner -->
 

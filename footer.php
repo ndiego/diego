@@ -29,7 +29,7 @@
 						 <span class="sep"> | </span>
 							 <?php
 							 /* translators: 1: Theme name, 2: Theme author. */
-							 printf( esc_html__( 'Theme: %1$s by %2$s.', 'diego' ), 'diego', '<a href="https://automattic.com/">Automattic</a>' );
+							 printf( esc_html__( 'Theme: %1$s by %2$s.', 'diego' ), 'Diego', '<a href="https://www.nickdiego.com/">Nick Diego</a>' );
 							 ?>
 					 <?php
 				 endif;

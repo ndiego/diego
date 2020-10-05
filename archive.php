@@ -11,9 +11,14 @@ get_header();
 ?>
 	<div class="site-inner">
 
-		<?php
-			get_template_part( 'template-parts/title-container-archive' );
-		?>
+		<aside class="title-container">
+		    <div class="wrap">
+		        <?php
+		            the_archive_title( '<h1 class="archive-title">', '</h1>' );
+		            the_archive_description( '<div class="archive-description">', '</div>' );
+		        ?>
+		    </div>
+		</aside>
 
 		<div class="content-sidebar-wrap">
 			<main id="primary" class="site-main">

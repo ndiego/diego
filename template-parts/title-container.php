@@ -18,6 +18,9 @@
                 <h1 class="blog-title"><?php single_post_title(); ?></h1>
             </div>
             <?php
+            if ( is_active_sidebar( 'blog-header' ) ) : 
+                 dynamic_sidebar( 'blog-header' );
+            endif;
         else :
             
             if ( 'post' === get_post_type() ) :
