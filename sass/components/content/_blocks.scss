@@ -126,3 +126,50 @@
         }
     } 
 }
+
+
+/* Group Block */
+.wp-block-group {
+    &.home-feature {
+        .wp-block-group__inner-container {
+            max-width: 736px;
+            margin: 10rem auto 0;
+            padding: 10rem 0 6rem;
+        }
+        
+        .title-heading {
+            font-size: 1.6rem;
+            letter-spacing: .08em;
+            text-transform: uppercase;
+            font-family: "AvenirLTStd-Heavy", sans-serif;
+            margin-bottom: 0;
+        }
+        
+        h2 {
+            font-size: 50px;
+            margin: 1.5rem 0 3rem;
+        }
+        
+        .featured-project {
+            padding: 0 4rem;
+            
+            h3 {
+                font-size: 3.5rem;
+                margin: 0 0 1.5rem;
+            }
+            
+            .sub-heading {
+                display: inline-block;
+                background: #d7e8dc;
+                border-radius: 4px;
+                color: #648a7c;
+                font-family: "AvenirLTStd-Heavy", sans-serif;
+                font-size: 1.2rem;
+                letter-spacing: .08em;
+                padding: .6rem 1rem .2rem;
+                text-transform: uppercase;
+                margin-bottom: 1.5rem;
+            }
+        }
+    }
+}
