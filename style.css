@@ -66,7 +66,7 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 	src: url("webFonts/AvenirLTStd-Medium/font.woff2") format("woff2"), url("webFonts/AvenirLTStd-Medium/font.woff") format("woff");
 }
 
-/*$color__background-main: #f0f1f2;*/
+/*$color__background-main: #f0f1f2;f2f4f1 d9ddd5*/
 /*--------------------------------------------------------------
 # Generic
 --------------------------------------------------------------*/
@@ -528,6 +528,18 @@ textarea {
 	line-height: 1.65;
 }
 
+@media screen and (max-width: 1075px) {
+	body,
+	button,
+	input,
+	select,
+	optgroup,
+	textarea {
+		font-size: 18px;
+		font-size: 1.8rem;
+	}
+}
+
 h1,
 h2,
 h3,
@@ -537,6 +549,25 @@ h6 {
 	clear: both;
 	font-family: "AvenirLTStd-Heavy", sans-serif;
 	font-weight: normal;
+}
+
+.home h1 {
+	font-size: 70px;
+	font-size: 7rem;
+	margin: 0 0 1rem;
+}
+
+@media screen and (max-width: 1075px) {
+	.home h1 {
+		font-size: 50px;
+		font-size: 5rem;
+	}
+}
+
+.home h2 {
+	font-size: 50px;
+	font-size: 5rem;
+	margin: 0 0 2rem;
 }
 
 p {
@@ -684,8 +715,8 @@ a:hover, a:active {
 .site-footer .footer-left a,
 .widget-area a {
 	color: #222;
-	border-bottom: 1px solid #f0f1f2;
-	box-shadow: inset 0 -1px 0 0 #f0f1f2;
+	border-bottom: 1px solid #c8ccd0;
+	box-shadow: inset 0 -1px 0 0 #c8ccd0;
 	font-family: 'AvenirLTStd-Heavy', sans-serif;
 	position: relative;
 	text-decoration: none;
@@ -840,7 +871,7 @@ input[type="submit"]:visited,
 }
 
 .entry-content .button-alt:hover {
-	background-color: #fff !important;
+	background-color: transparent !important;
 	color: #222 !important;
 }
 
@@ -1533,8 +1564,8 @@ textarea {
 }
 
 .project .project-status .supported {
-	background: #d6e8fb;
-	color: #5b87b7;
+	background: #cadcef;
+	color: #5d7498;
 }
 
 .project .project-status .critical-support {
@@ -1639,6 +1670,11 @@ textarea {
 
 /* Block specific styling
 --------------------------------------------- */
+/* Background colors for blocks */
+.has-background-grey-background-color {
+	background-color: #f0f1f2 !important;
+}
+
 /* Core Image Block */
 .wp-block-image {
 	line-height: 1;
@@ -1667,7 +1703,7 @@ textarea {
 
 /* Core Latest Posts Block */
 .wp-block-latest-posts {
-	margin: 0 0 2rem;
+	margin: 0 0 6rem;
 	padding: 0;
 }
 
@@ -1687,8 +1723,7 @@ textarea {
 }
 
 .wp-block-latest-posts li a:first-child.more-link {
-	font-size: 20px;
-	font-size: 2rem;
+	font-size: 1em;
 }
 
 .wp-block-latest-posts li time {
@@ -1717,19 +1752,6 @@ textarea {
 	.wp-block-cover.home-bio {
 		margin-bottom: 6rem;
 		padding: 6rem 0;
-	}
-}
-
-.wp-block-cover-image.home-bio h1,
-.wp-block-cover.home-bio h1 {
-	font-size: 3em;
-	margin: 0 0 1rem;
-}
-
-@media screen and (max-width: 1075px) {
-	.wp-block-cover-image.home-bio h1,
-	.wp-block-cover.home-bio h1 {
-		font-size: 2.5em;
 	}
 }
 
@@ -1770,10 +1792,22 @@ textarea {
 }
 
 /* Group Block */
+.wp-block-group.home-feature {
+	margin-bottom: 0;
+}
+
 .wp-block-group.home-feature .wp-block-group__inner-container {
 	max-width: 736px;
 	margin: 10rem auto 0;
-	padding: 10rem 0 6rem;
+	padding: 12rem 0 4rem;
+}
+
+@media screen and (max-width: 1075px) {
+	.wp-block-group.home-feature .wp-block-group__inner-container {
+		width: 100%;
+		padding-right: 5%;
+		padding-left: 5%;
+	}
 }
 
 .wp-block-group.home-feature .title-heading {
@@ -1785,12 +1819,17 @@ textarea {
 }
 
 .wp-block-group.home-feature h2 {
-	font-size: 50px;
 	margin: 1.5rem 0 3rem;
 }
 
 .wp-block-group.home-feature .featured-project {
 	padding: 0 4rem;
+}
+
+@media screen and (max-width: 1075px) {
+	.wp-block-group.home-feature .featured-project {
+		padding: 0;
+	}
 }
 
 .wp-block-group.home-feature .featured-project h3 {
@@ -1800,9 +1839,9 @@ textarea {
 
 .wp-block-group.home-feature .featured-project .sub-heading {
 	display: inline-block;
-	background: #d7e8dc;
+	background: #cadcef;
 	border-radius: 4px;
-	color: #648a7c;
+	color: #5d7498;
 	font-family: "AvenirLTStd-Heavy", sans-serif;
 	font-size: 1.2rem;
 	letter-spacing: .08em;
@@ -2151,9 +2190,52 @@ figure.box-shadow img {
 	}
 }
 
+.home .site-footer {
+	padding-top: 0;
+}
+
+.home .site-footer .wrap {
+	border-top: none;
+}
+
 /*--------------------------------------------------------------
 # Plugins
 --------------------------------------------------------------*/
+/* Convert =kit forms
+--------------------------------------------- */
+.formkit-form {
+	-webkit-font-smoothing: auto !important;
+}
+
+.formkit-form input {
+	font-family: "AvenirLTStd-Medium", sans-serif;
+}
+
+.formkit-form .formkit-submit {
+	border: 2px solid #222 !important;
+}
+
+.formkit-form .formkit-submit:hover {
+	background: transparent !important;
+}
+
+.formkit-form .formkit-submit > span {
+	padding: 1em 1.2em .7em !important;
+}
+
+.formkit-form .formkit-submit > span:hover {
+	color: #222 !important;
+	background: transparent !important;
+}
+
+.formkit-form .formkit-powered-by-convertkit-container {
+	display: none !important;
+}
+
+.home .formkit-form {
+	margin: 0 auto 4rem;
+}
+
 /* Jetpack infinite scroll
 --------------------------------------------- */
 /* Hide the Posts Navigation and the Footer when Infinite Scroll is in use. */

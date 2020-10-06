@@ -8,3 +8,22 @@ h6 {
 	font-family: $font__heavy;
 	font-weight: normal;
 }
+
+
+.home {
+	h1 {
+		font-size: 70px;
+		font-size: 7rem;
+    	margin: 0 0 1rem;
+		
+		@media screen and ( max-width: $breakpoint__tablet ) {
+			font-size: 50px;
+			font-size: 5rem;
+		}
+	}
+	h2 {
+		font-size: 50px;
+		font-size: 5rem;
+		margin: 0 0 2rem;
+	}
+}

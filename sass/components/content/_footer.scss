@@ -35,3 +35,13 @@
         padding-left: 5%;
     }
 }
+
+.home {
+	.site-footer {
+		padding-top: 0;
+        
+        .wrap {
+            border-top: none;
+        }
+	}
+}

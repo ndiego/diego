@@ -1,3 +1,9 @@
+/* Background colors for blocks */
+.has-background-grey-background-color {
+    background-color: $color__background-main !important;
+}
+
+
 /* Core Image Block */
 .wp-block-image {
     line-height: 1;
@@ -35,7 +41,7 @@
 
 /* Core Latest Posts Block */
 .wp-block-latest-posts {
-    margin: 0 0 2rem;
+    margin: 0 0 6rem;
     padding: 0;
     
     li {
@@ -52,8 +58,7 @@
             font-size: 3rem;
             
             &.more-link {
-                font-size: 20px;
-                font-size: 2rem;
+                font-size: 1em;
             }
         }
         
@@ -83,15 +88,6 @@
         @media screen and ( max-width: $breakpoint__tablet ) {
             margin-bottom: 6rem;
             padding: 6rem 0;
-        }
-        
-        h1 {
-            font-size: 3em;
-            margin: 0 0 1rem;
-            
-            @media screen and ( max-width: $breakpoint__tablet ) {
-                font-size: 2.5em;
-            }
         }
         
         .wp-block-cover__inner-container {
@@ -131,10 +127,18 @@
 /* Group Block */
 .wp-block-group {
     &.home-feature {
+        margin-bottom: 0;
+        
         .wp-block-group__inner-container {
             max-width: 736px;
             margin: 10rem auto 0;
-            padding: 10rem 0 6rem;
+            padding: 12rem 0 4rem;
+            
+            @media screen and ( max-width: $breakpoint__tablet ) {
+                width: 100%;
+                padding-right: 5%;
+                padding-left: 5%;
+            }
         }
         
         .title-heading {
@@ -146,12 +150,15 @@
         }
         
         h2 {
-            font-size: 50px;
             margin: 1.5rem 0 3rem;
         }
         
         .featured-project {
             padding: 0 4rem;
+            
+            @media screen and ( max-width: $breakpoint__tablet ) {
+                padding: 0;
+            }
             
             h3 {
                 font-size: 3.5rem;
@@ -160,9 +167,9 @@
             
             .sub-heading {
                 display: inline-block;
-                background: #d7e8dc;
+                background: #cadcef;
                 border-radius: 4px;
-                color: #648a7c;
+                color: #5d7498;
                 font-family: "AvenirLTStd-Heavy", sans-serif;
                 font-size: 1.2rem;
                 letter-spacing: .08em;

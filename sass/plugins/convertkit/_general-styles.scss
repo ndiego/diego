@@ -1,0 +1,33 @@
+.formkit-form {
+    -webkit-font-smoothing: auto !important;
+    
+    input {
+        font-family: $font__medium;
+    }
+    
+    .formkit-submit {
+        border: 2px solid $color__text-main !important;
+        
+        &:hover {
+            background: transparent !important;
+        }
+    }
+    .formkit-submit > span {
+        padding: 1em 1.2em .7em !important;
+        
+        &:hover {
+            color: $color__text-main !important;
+            background: transparent !important;
+        }
+    }
+    .formkit-powered-by-convertkit-container {
+        display: none !important;
+    }
+}
+
+.home {
+    .formkit-form {
+        margin: 0 auto 4rem;
+    }
+}
+

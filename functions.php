@@ -228,10 +228,20 @@ add_editor_style( 'style-editor.css' );
 
 add_theme_support( 'editor-color-palette', array(
     array(
-        'name' => __( 'very dark gray', 'themeLangDomain' ),
-        'slug' => 'very-dark-gray',
+        'name' => __( 'Almost Black', 'diego' ),
+        'slug' => 'almost-black',
         'color' => '#222',
     ),
+	array(
+		'name' => __( 'Background Green', 'diego' ),
+		'slug' => 'background-green',
+		'color' => '#f2f4f1',
+	),
+	array(
+		'name' => __( 'Background Grey', 'diego' ),
+		'slug' => 'background-grey',
+		'color' => '#f0f1f2',
+	),
 ) );
 
 /* Create a custom read more link */
