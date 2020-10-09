@@ -24,6 +24,7 @@
             font-size: 1.4rem;
             letter-spacing: .08em;
             text-transform: uppercase;
+            opacity: $font__accent_opacity
         }
         
         .social-share {
@@ -61,14 +62,14 @@
     }
     
     .archive-title {
-        font-size: 2rem;
-        letter-spacing: .08em;
-        text-transform: uppercase;
+        font-size: 5rem;
         
-        span {
+        .archive-label {
+            font-size: 2rem;
+            letter-spacing: .08em;
+            text-transform: uppercase;
             display: block;
-            font-size: 5rem;
-            text-transform: none;
+            opacity: $font__accent_opacity;
         }
     }
     

@@ -208,6 +208,12 @@
 
 
 /* Extra Stuff */
+.projects-opener {
+	max-width: 736px;
+	margin: 0 auto;
+	border-bottom: 1px solid $color__borders;
+	padding-bottom: 4rem;
+}
 .project {
 	&.first {
 		margin-top: 8rem;
@@ -385,6 +391,13 @@
 /* More lInk */
 .more-link {
 	white-space: nowrap;
+}
+
+/* Force content to the left on mobile */
+.mobile-left {
+	@media screen and ( max-width: $breakpoint__mobile ) {
+		text-align: left !important;
+	}
 }
 
 

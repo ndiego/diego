@@ -540,6 +540,10 @@ textarea {
 	}
 }
 
+.period {
+	opacity: .3;
+}
+
 h1,
 h2,
 h3,
@@ -715,8 +719,8 @@ a:hover, a:active {
 .site-footer .footer-left a,
 .widget-area a {
 	color: #222;
-	border-bottom: 1px solid #c8ccd0;
-	box-shadow: inset 0 -1px 0 0 #c8ccd0;
+	border-bottom: 1px solid #2222224d;
+	box-shadow: inset 0 -1px 0 0 #2222224d;
 	font-family: 'AvenirLTStd-Heavy', sans-serif;
 	position: relative;
 	text-decoration: none;
@@ -892,7 +896,7 @@ input[type="datetime-local"],
 input[type="color"],
 textarea {
 	color: #666;
-	border: 1px solid #f0f1f2;
+	border: 1px solid #2222221a;
 	border-radius: 4px;
 	padding: .5rem 1rem;
 }
@@ -924,7 +928,7 @@ input[type="search"] {
 }
 
 select {
-	border: 1px solid #f0f1f2;
+	border: 1px solid #2222221a;
 }
 
 textarea {
@@ -1172,6 +1176,7 @@ textarea {
 	font-size: 1.4rem;
 	letter-spacing: .08em;
 	text-transform: uppercase;
+	opacity: 0.5;
 }
 
 .title-container .entry-meta .social-share {
@@ -1208,15 +1213,15 @@ textarea {
 }
 
 .title-container .archive-title {
+	font-size: 5rem;
+}
+
+.title-container .archive-title .archive-label {
 	font-size: 2rem;
 	letter-spacing: .08em;
 	text-transform: uppercase;
-}
-
-.title-container .archive-title span {
 	display: block;
-	font-size: 5rem;
-	text-transform: none;
+	opacity: 0.5;
 }
 
 .title-container .widget {
@@ -1438,7 +1443,7 @@ textarea {
 }
 
 .entry-footer {
-	border-top: 1px solid #f0f1f2;
+	border-top: 1px solid #2222221a;
 	display: flex;
 	font-family: "AvenirLTStd-Heavy", sans-serif;
 	font-size: 1.4rem;
@@ -1497,6 +1502,13 @@ textarea {
 }
 
 /* Extra Stuff */
+.projects-opener {
+	max-width: 736px;
+	margin: 0 auto;
+	border-bottom: 1px solid #2222221a;
+	padding-bottom: 4rem;
+}
+
 .project.first {
 	margin-top: 8rem;
 	margin-bottom: 8rem;
@@ -1613,7 +1625,7 @@ textarea {
 @media screen and (max-width: 600px) {
 	.project:not(.alignwide) .wp-block-column:first-child {
 		padding-bottom: 5rem;
-		border-bottom: 1px solid #f0f1f2;
+		border-bottom: 1px solid #2222221a;
 		margin-bottom: 4rem;
 	}
 }
@@ -1668,6 +1680,13 @@ textarea {
 	white-space: nowrap;
 }
 
+/* Force content to the left on mobile */
+@media screen and (max-width: 600px) {
+	.mobile-left {
+		text-align: left !important;
+	}
+}
+
 /* Block specific styling
 --------------------------------------------- */
 /* Background colors for blocks */
@@ -1708,7 +1727,7 @@ textarea {
 }
 
 .wp-block-latest-posts li {
-	border-top: 1px solid #f0f1f2;
+	border-top: 1px solid #2222221a;
 	padding: 30px 0 35px;
 	padding: 3rem 0 3.5rem;
 }
@@ -1744,7 +1763,7 @@ textarea {
 .wp-block-cover.home-bio {
 	margin-top: 0;
 	margin-bottom: 10rem;
-	padding: 12rem 0 10rem;
+	padding: 12rem 0 12rem;
 }
 
 @media screen and (max-width: 1075px) {
@@ -1783,6 +1802,11 @@ textarea {
 	}
 }
 
+.wp-block-cover-image.home-bio .wp-block-buttons,
+.wp-block-cover.home-bio .wp-block-buttons {
+	margin-top: 4rem;
+}
+
 @media screen and (max-width: 600px) {
 	.wp-block-cover-image.home-bio .wp-block-image,
 	.wp-block-cover.home-bio .wp-block-image {
@@ -1816,6 +1840,7 @@ textarea {
 	text-transform: uppercase;
 	font-family: "AvenirLTStd-Heavy", sans-serif;
 	margin-bottom: 0;
+	opacity: 0.5;
 }
 
 .wp-block-group.home-feature h2 {
@@ -1878,7 +1903,7 @@ textarea {
 }
 
 .comment {
-	border: 1px solid #f0f1f2;
+	border: 1px solid #2222221a;
 	border-bottom-width: 4px;
 	border-radius: 4px;
 	margin-top: 3rem;
@@ -2156,7 +2181,7 @@ figure.box-shadow img {
 }
 
 .site-footer .wrap {
-	border-top: 1px solid #f0f1f2;
+	border-top: 1px solid #2222221a;
 	padding: 3em 0;
 }
 
@@ -2207,8 +2232,13 @@ figure.box-shadow img {
 	-webkit-font-smoothing: auto !important;
 }
 
+.formkit-form div:first-child {
+	padding: 0 !important;
+}
+
 .formkit-form input {
 	font-family: "AvenirLTStd-Medium", sans-serif;
+	border: 1px solid #2222221a !important;
 }
 
 .formkit-form .formkit-submit {
@@ -2234,6 +2264,14 @@ figure.box-shadow img {
 
 .home .formkit-form {
 	margin: 0 auto 4rem;
+}
+
+.title-container .formkit-form {
+	margin: 0 0 2rem;
+}
+
+.title-container .formkit-form input {
+	border: 1px solid #2222224d !important;
 }
 
 /* Jetpack infinite scroll

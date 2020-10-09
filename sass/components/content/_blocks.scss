@@ -45,7 +45,7 @@
     padding: 0;
     
     li {
-        border-top: 1px solid #f0f1f2;
+        border-top: 1px solid $color__borders;
         padding: 30px 0 35px;
         padding: 3rem 0 3.5rem;
         
@@ -83,7 +83,7 @@
     &.home-bio {
         margin-top: 0;
         margin-bottom: 10rem;
-        padding: 12rem 0 10rem;
+        padding: 12rem 0 12rem;
         
         @media screen and ( max-width: $breakpoint__tablet ) {
             margin-bottom: 6rem;
@@ -112,6 +112,10 @@
                     }
                 }
             }
+        }
+        
+        .wp-block-buttons {
+            margin-top: 4rem;
         }
         
         .wp-block-image {
@@ -147,6 +151,7 @@
             text-transform: uppercase;
             font-family: "AvenirLTStd-Heavy", sans-serif;
             margin-bottom: 0;
+            opacity: $font__accent_opacity;
         }
         
         h2 {

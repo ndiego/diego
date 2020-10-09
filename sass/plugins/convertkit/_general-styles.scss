@@ -1,8 +1,13 @@
 .formkit-form {
     -webkit-font-smoothing: auto !important;
     
+    div:first-child {
+        padding: 0 !important;
+    }
+    
     input {
         font-family: $font__medium;
+        border: 1px solid $color__borders !important;
     }
     
     .formkit-submit {
@@ -31,3 +36,12 @@
     }
 }
 
+.title-container {
+    .formkit-form {
+        margin: 0 0 2rem;
+        
+        input {
+            border: 1px solid $color__link-border !important;
+        }
+    }
+}

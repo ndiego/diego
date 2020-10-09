@@ -257,3 +257,19 @@ function diego_excerpt_more( $more ) {
 }
 add_filter( 'excerpt_more', 'diego_excerpt_more' );
 
+function diego_filter_archive_title($title) {    
+    if ( is_category() ) {    
+            $title = '<span class="archive-label">' . __( 'Category:', 'diego' ) . '</span>' . single_cat_title( '', false );    
+        } elseif ( is_tag() ) {    
+            $title = '<span class="archive-label">' . __( 'Tag:', 'diego' ) . '</span>' . single_tag_title( '', false );    
+        } elseif ( is_author() ) {    
+            $title = '<span class="vcard">' . get_the_author() . '</span>' ;    
+        } elseif ( is_tax() ) { //for custom post types
+            $title = sprintf( __( '%1$s' ), single_term_title( '', false ) );
+        } elseif (is_post_type_archive()) {
+            $title = post_type_archive_title( '', false );
+        }
+    return $title;    
+};
+add_filter( 'get_the_archive_title', 'diego_filter_archive_title' );
+
