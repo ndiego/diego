@@ -555,6 +555,16 @@ h6 {
 	font-weight: normal;
 }
 
+@media screen and (max-width: 600px) {
+	h2,
+	h3,
+	h4,
+	h5,
+	h6 {
+		line-height: 1.2;
+	}
+}
+
 h2 {
 	font-size: 40px;
 	font-size: 4rem;
@@ -988,7 +998,6 @@ textarea {
 .site-branding {
 	float: left;
 	padding: 0;
-	width: 180px;
 }
 
 .site-branding .site-title {
@@ -1538,13 +1547,18 @@ textarea {
 }
 
 .project.first {
-	margin-top: 8rem;
-	margin-bottom: 8rem;
+	margin: 8rem 0;
+}
+
+@media screen and (max-width: 600px) {
+	.project.first {
+		margin: 6rem 0;
+	}
 }
 
 .project:not(.first) {
 	border-top: 1px solid #f0f1f2;
-	padding: 6rem 0 5rem;
+	padding: 6rem 0;
 }
 
 .project h2 {
@@ -1598,6 +1612,12 @@ textarea {
 	text-transform: uppercase;
 }
 
+@media screen and (max-width: 600px) {
+	.project .project-status .status {
+		margin-bottom: 5px;
+	}
+}
+
 .project .project-status .development {
 	background: #d7e8dc;
 	color: #648a7c;
@@ -1647,14 +1667,23 @@ textarea {
 	font-size: 1.4rem;
 	white-space: nowrap;
 	display: inline-block;
-	margin-bottom: 10px;
 }
 
 @media screen and (max-width: 600px) {
+	.project .project-links a {
+		margin-bottom: 10px;
+	}
+}
+
+@media screen and (max-width: 600px) {
+	.project:not(.alignwide).wp-block-columns {
+		margin-bottom: 0;
+		padding-top: 5rem;
+	}
 	.project:not(.alignwide) .wp-block-column:first-child {
-		padding-bottom: 5rem;
+		padding-bottom: 6rem;
 		border-bottom: 1px solid #2222221a;
-		margin-bottom: 4rem;
+		margin-bottom: 5rem;
 	}
 }
 
@@ -1888,6 +1917,12 @@ textarea {
 .wp-block-group.home-feature .featured-project h3 {
 	font-size: 3.5rem;
 	margin: 0 0 1.5rem;
+}
+
+@media screen and (max-width: 600px) {
+	.wp-block-group.home-feature .featured-project h3 {
+		margin: 2.5rem 0 1.5rem;
+	}
 }
 
 .wp-block-group.home-feature .featured-project .sub-heading {
