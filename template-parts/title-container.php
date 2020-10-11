@@ -15,7 +15,7 @@
         if ( is_home() ) :
             ?>
             <div>
-                <h1 class="blog-title"><?php single_post_title(); ?></h1>
+                <h1 class="blog-title"><?php single_post_title(); ?><span class="period">.</span></h1>
             </div>
             <?php
             if ( is_active_sidebar( 'blog-header' ) ) : 
@@ -36,7 +36,7 @@
             endif; 
             
             if ( is_singular() ) :
-                the_title( '<h1 class="entry-title">', '</h1>' );
+                the_title( '<h1 class="entry-title">', '<span class="period">.</span></h1>' );
             else :
                 the_title( '<h2 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
             endif;

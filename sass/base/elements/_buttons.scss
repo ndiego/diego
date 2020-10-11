@@ -32,6 +32,20 @@ input[type="submit"],
 	&:visited {
 		color: $color__text-main;
 	}
+	
+	/* Add Fontawesome icons */
+	&.download {
+		&::before {
+			display: none;
+			font-family: "Font Awesome 5 Free"; 
+			font-weight: 900; 
+			content: "\f381";
+		}
+		
+		svg {
+			margin-right: 10px;
+		}
+	}
 }
 
 .entry-content {

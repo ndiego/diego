@@ -132,6 +132,7 @@
 		
 		img {
 			border-radius: $border__radius;
+			box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
 		}
 	}
 }
@@ -222,13 +223,14 @@
 	
 	&:not(.first) {
 		border-top: 1px solid #f0f1f2;
-		padding: 4rem 0 3rem;
+		padding: 6rem 0 5rem;
 	}
 
 
 	h2 {
 		font-size: 40px;
 		font-size: 4rem;
+		margin-top: 2.5rem;
 		margin-bottom: 1rem;
     	line-height: 1.2;
 		
@@ -254,7 +256,6 @@
 		}
 		
 		h2 {
-			margin-top: 1rem;
 			font-size: 30px;
 			font-size: 3rem;
 		}
@@ -399,5 +400,6 @@
 		text-align: left !important;
 	}
 }
+
 
 

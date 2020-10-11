@@ -175,8 +175,22 @@ function diego_scripts() {
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
 	}
+	
+	/* Load Fontawesome scripts */
+	wp_enqueue_script( 'diego-fontawesome', 'https://kit.fontawesome.com/8da28bfbc7.js', array(), DIEGO_VERSION, false );
 }
 add_action( 'wp_enqueue_scripts', 'diego_scripts' );
+
+/**
+ * Append Font Awesome script attributes 
+ */
+function diego_fontawesome_script_attributes( $tag, $handle ) {
+	if ( 'diego-fontawesome' !== $handle )
+  	return $tag;
+
+ 	return str_replace( ' src', ' data-search-pseudo-elements crossorigin="anonymous" src', $tag );
+}
+add_filter('script_loader_tag', 'diego_fontawesome_script_attributes', 10, 2);
 
 /**
  * Load dashicons on the frontend.
@@ -220,12 +234,13 @@ if ( class_exists( 'WooCommerce' ) ) {
 	require get_template_directory() . '/inc/woocommerce.php';
 }
 
-
-/* Block Editor Specific Styles */
+/**
+ * Block Editor Specific Styles.
+ */
 add_theme_support( 'editor-styles' );
-
 add_editor_style( 'style-editor.css' );
 
+/* Add custom colors to the editor */
 add_theme_support( 'editor-color-palette', array(
     array(
         'name' => __( 'Almost Black', 'diego' ),
@@ -244,19 +259,20 @@ add_theme_support( 'editor-color-palette', array(
 	),
 ) );
 
-/* Create a custom read more link */
+/**
+ * Create a custom read more link.
+ */
 function diego_excerpt_more( $more ) {
-	//if ( is_front_page() ) {
-		return sprintf( ' … <a href="%1$s" class="more-link">%2$s</a>',
-			  esc_url( get_permalink( get_the_ID() ) ),
-			  sprintf( __( 'Continue reading &rarr; %s', 'wpdocs' ), '<span class="screen-reader-text">' . get_the_title( get_the_ID() ) . '</span>' )
-		);
-	//} else {
-		//return ' …';
-	//}
+	return sprintf( ' … <a href="%1$s" class="more-link">%2$s</a>',
+		  esc_url( get_permalink( get_the_ID() ) ),
+		  sprintf( __( 'Continue reading &rarr; %s', 'wpdocs' ), '<span class="screen-reader-text">' . get_the_title( get_the_ID() ) . '</span>' )
+	);
 }
 add_filter( 'excerpt_more', 'diego_excerpt_more' );
 
+/**
+ * Create a custom archive title.
+ */
 function diego_filter_archive_title($title) {    
     if ( is_category() ) {    
             $title = '<span class="archive-label">' . __( 'Category:', 'diego' ) . '</span>' . single_cat_title( '', false );    

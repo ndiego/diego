@@ -555,6 +555,11 @@ h6 {
 	font-weight: normal;
 }
 
+h2 {
+	font-size: 40px;
+	font-size: 4rem;
+}
+
 .home h1 {
 	font-size: 70px;
 	font-size: 7rem;
@@ -836,6 +841,7 @@ input[type="submit"],
 	outline: 0;
 	padding: 1em 1.2em .7em;
 	text-transform: uppercase;
+	/* Add Fontawesome icons */
 }
 
 button:hover,
@@ -856,6 +862,27 @@ input[type="submit"]:visited,
 .wp-block-button__link:visited,
 .button:visited {
 	color: #222;
+}
+
+button.download::before,
+input[type="button"].download::before,
+input[type="reset"].download::before,
+input[type="submit"].download::before,
+.wp-block-button__link.download::before,
+.button.download::before {
+	display: none;
+	font-family: "Font Awesome 5 Free";
+	font-weight: 900;
+	content: "\f381";
+}
+
+button.download svg,
+input[type="button"].download svg,
+input[type="reset"].download svg,
+input[type="submit"].download svg,
+.wp-block-button__link.download svg,
+.button.download svg {
+	margin-right: 10px;
 }
 
 .entry-content .button,
@@ -1429,6 +1456,7 @@ textarea {
 
 .hentry .post-thumbnail img {
 	border-radius: 4px;
+	box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
 }
 
 .entry-content {
@@ -1516,12 +1544,13 @@ textarea {
 
 .project:not(.first) {
 	border-top: 1px solid #f0f1f2;
-	padding: 4rem 0 3rem;
+	padding: 6rem 0 5rem;
 }
 
 .project h2 {
 	font-size: 40px;
 	font-size: 4rem;
+	margin-top: 2.5rem;
 	margin-bottom: 1rem;
 	line-height: 1.2;
 }
@@ -1548,7 +1577,6 @@ textarea {
 }
 
 .project:not(.alignwide) h2 {
-	margin-top: 1rem;
 	font-size: 30px;
 	font-size: 3rem;
 }
@@ -2052,9 +2080,19 @@ textarea {
 	display: inline-block;
 }
 
+figure.box-shadow {
+	line-height: 0;
+}
+
 figure.box-shadow img {
-	box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+	box-shadow: 0 5px 30px rgba(0, 0, 0, 0.09);
 	border-radius: 4px;
+	border: 6px solid #ffffff;
+}
+
+figure.box-shadow.is-style-rounded img {
+	border-radius: 1000px;
+	border: none;
 }
 
 /* Captions
@@ -2177,7 +2215,7 @@ figure.box-shadow img {
 .site-footer {
 	font-size: 1.6rem;
 	font-size: 16px;
-	padding-top: 5%;
+	padding-top: 10%;
 }
 
 .site-footer .wrap {
@@ -2206,6 +2244,13 @@ figure.box-shadow img {
 
 .site-footer .widget {
 	margin: 0;
+}
+
+.site-footer .affiliate-disclaimer {
+	font-size: 12px;
+	font-size: 1.2rem;
+	opacity: .5;
+	margin: 3rem 0;
 }
 
 @media screen and (max-width: 1075px) {

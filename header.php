@@ -18,7 +18,6 @@
 	<link rel="profile" href="https://gmpg.org/xfn/11">
 
 	<?php wp_head(); ?>
-	<script src="https://kit.fontawesome.com/8da28bfbc7.js" crossorigin="anonymous"></script>
 </head>
 
 <body <?php body_class(); ?>>
