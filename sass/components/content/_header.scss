@@ -14,6 +14,10 @@
     float: left;
     padding: 0;
     
+    @media screen and ( max-width: $breakpoint__small-desktop ) {
+        padding: 4px 0;
+    }
+    
     .site-title {
         margin: 7px 0 6px;
         font-size: 22px;

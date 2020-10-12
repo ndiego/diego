@@ -36,7 +36,8 @@
             endif; 
             
             if ( is_singular() ) :
-                the_title( '<h1 class="entry-title">', '<span class="period">.</span></h1>' );
+                $period = get_post_type() == 'page' ? '<span class="period">.</span>' : '';
+                the_title( '<h1 class="entry-title">', $period . '</h1>' );
             else :
                 the_title( '<h2 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
             endif;

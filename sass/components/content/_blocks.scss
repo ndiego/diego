@@ -168,10 +168,6 @@
             h3 {
                 font-size: 3.5rem;
                 margin: 0 0 1.5rem;
-                
-                @media screen and ( max-width: $breakpoint__mobile ) {
-                    margin: 2.5rem 0 1.5rem;
-                }
             }
             
             .sub-heading {
@@ -185,6 +181,10 @@
                 padding: .6rem 1rem .2rem;
                 text-transform: uppercase;
                 margin-bottom: 1.5rem;
+                
+                @media screen and ( max-width: $breakpoint__mobile ) {
+                    margin: 2.5rem 0 1.5rem;
+                }
             }
         }
     }

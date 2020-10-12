@@ -18,9 +18,10 @@
 }
 
 .entry-content .alignwide {
-    width: calc(100% + 20vw);
+    width: calc(100% + 244px);
     position: relative;
-    margin: 4rem -10vw;
+    margin: 4rem -122px;
+    max-width: 980px;
     
     @media screen and ( max-width: $breakpoint__tablet ) {
         width: 100%;

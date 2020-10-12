@@ -482,9 +482,10 @@ html {
 }
 
 .entry-content .alignwide {
-	width: calc(100% + 20vw);
+	width: calc(100% + 244px);
 	position: relative;
-	margin: 4rem -10vw;
+	margin: 4rem -122px;
+	max-width: 980px;
 }
 
 @media screen and (max-width: 1075px) {
@@ -1000,6 +1001,12 @@ textarea {
 	padding: 0;
 }
 
+@media screen and (max-width: 1220px) {
+	.site-branding {
+		padding: 4px 0;
+	}
+}
+
 .site-branding .site-title {
 	margin: 7px 0 6px;
 	font-size: 22px;
@@ -1277,7 +1284,7 @@ textarea {
 @media screen and (max-width: 1075px) {
 	.single-post .title-container.has-thumbnail .wrap,
 	.page .title-container.has-thumbnail .wrap {
-		padding: 3rem 5% 5rem;
+		padding-bottom: 5rem;
 	}
 }
 
@@ -1547,7 +1554,8 @@ textarea {
 }
 
 .project.first {
-	margin: 8rem 0;
+	margin-top: 8rem;
+	margin-bottom: 8rem;
 }
 
 @media screen and (max-width: 600px) {
@@ -1558,7 +1566,7 @@ textarea {
 
 .project:not(.first) {
 	border-top: 1px solid #f0f1f2;
-	padding: 6rem 0;
+	padding: 6rem 0 5rem;
 }
 
 .project h2 {
@@ -1667,12 +1675,7 @@ textarea {
 	font-size: 1.4rem;
 	white-space: nowrap;
 	display: inline-block;
-}
-
-@media screen and (max-width: 600px) {
-	.project .project-links a {
-		margin-bottom: 10px;
-	}
+	margin-bottom: 10px;
 }
 
 @media screen and (max-width: 600px) {
@@ -1919,12 +1922,6 @@ textarea {
 	margin: 0 0 1.5rem;
 }
 
-@media screen and (max-width: 600px) {
-	.wp-block-group.home-feature .featured-project h3 {
-		margin: 2.5rem 0 1.5rem;
-	}
-}
-
 .wp-block-group.home-feature .featured-project .sub-heading {
 	display: inline-block;
 	background: #cadcef;
@@ -1936,6 +1933,12 @@ textarea {
 	padding: .6rem 1rem .2rem;
 	text-transform: uppercase;
 	margin-bottom: 1.5rem;
+}
+
+@media screen and (max-width: 600px) {
+	.wp-block-group.home-feature .featured-project .sub-heading {
+		margin: 2.5rem 0 1.5rem;
+	}
 }
 
 /* Comments
