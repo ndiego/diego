@@ -108,19 +108,24 @@
 	clear: both;
 	margin: 0 0 1.5em;
 }
+/*
+.site-main .filter-by-tags,
+.site-main .hentry,  
+.site-main .comments-area,
+.site-main .no-results
 
 .site-main .filter-by-tags,
 .site-main .hentry,  
-.site-main .comments-area {
+.site-main .comments-area
+*/
+.site-main {
 	margin-right: auto;
 	margin-left: auto;
 	max-width: 736px;
 }
 
 .wide {
-	.site-main .filter-by-tags,
-	.site-main .hentry,  
-	.site-main .comments-area {
+	.site-main {
 		max-width: 928px;
 	}
 }
@@ -155,9 +160,13 @@
 	font-size: 1.4rem;
 	justify-content: space-between;
 	letter-spacing: .08em;
-	margin-top: 3rem;
+	margin-top: 8rem;
     padding-top: 3rem;
 	text-transform: uppercase;
+	
+	@media screen and ( max-width: $breakpoint__tablet ) {
+		margin-top: 4rem;
+	}
 	
 	.edit-link {
 		a {

@@ -4,7 +4,7 @@ Theme URI: https://www.nickdiego.com
 Author: Nick Diego
 Author URI: https://www.nickdiego.com
 Description: The base theme for nickdiego.com
-Version: 1.0.4
+Version: 1.0.5
 Tested up to: 5.4
 Requires PHP: 5.6
 License: GNU General Public License v2 or later
@@ -706,7 +706,7 @@ table {
 /* Links
 --------------------------------------------- */
 a {
-	color: #4169e1;
+	color: #222;
 }
 
 a:visited {
@@ -728,6 +728,7 @@ a:hover, a:active {
 .entry-header a,
 .entry-content a,
 .entry-footer a,
+.comments-area a,
 .comment-author a,
 .comment-content a,
 .comment-form a,
@@ -745,6 +746,7 @@ a:hover, a:active {
 .entry-header a:after,
 .entry-content a:after,
 .entry-footer a:after,
+.comments-area a:after,
 .comment-author a:after,
 .comment-content a:after,
 .comment-form a:after,
@@ -765,6 +767,7 @@ a:hover, a:active {
 .entry-header a:hover:after,
 .entry-content a:hover:after,
 .entry-footer a:hover:after,
+.comments-area a:hover:after,
 .comment-author a:hover:after,
 .comment-content a:hover:after,
 .comment-form a:hover:after,
@@ -1451,17 +1454,23 @@ textarea {
 	margin: 0 0 1.5em;
 }
 
+/*
 .site-main .filter-by-tags,
-.site-main .hentry,
-.site-main .comments-area {
+.site-main .hentry,  
+.site-main .comments-area,
+.site-main .no-results
+
+.site-main .filter-by-tags,
+.site-main .hentry,  
+.site-main .comments-area
+*/
+.site-main {
 	margin-right: auto;
 	margin-left: auto;
 	max-width: 736px;
 }
 
-.wide .site-main .filter-by-tags,
-.wide .site-main .hentry,
-.wide .site-main .comments-area {
+.wide .site-main {
 	max-width: 928px;
 }
 
@@ -1493,9 +1502,15 @@ textarea {
 	font-size: 1.4rem;
 	justify-content: space-between;
 	letter-spacing: .08em;
-	margin-top: 3rem;
+	margin-top: 8rem;
 	padding-top: 3rem;
 	text-transform: uppercase;
+}
+
+@media screen and (max-width: 1075px) {
+	.entry-footer {
+		margin-top: 4rem;
+	}
 }
 
 .entry-footer .edit-link a {
@@ -2004,10 +2019,16 @@ textarea {
 	text-transform: uppercase;
 	color: #222;
 	text-decoration: none;
+	border: none;
+	box-shadow: none;
 }
 
 .comment-metadata a:hover {
 	color: #666;
+}
+
+.comment-metadata a:hover:after {
+	visibility: hidden;
 }
 
 .comment-content a {

@@ -1,5 +1,5 @@
 a {
-	color: $color__link;
+	color: $color__text-main;
 
 	&:visited {
 		color: $color__link-visited;
@@ -24,6 +24,7 @@ a {
 .entry-header,
 .entry-content,
 .entry-footer,
+.comments-area,
 .comment-author,
 .comment-content,
 .comment-form,
