@@ -14,14 +14,17 @@ h3,
 h4,
 h5,
 h6 {
-	@media screen and ( max-width: $breakpoint__mobile ) {
-		line-height: 1.2;
-	}
+	line-height: 1.2;
 }
 
 h2 {
 	font-size: 40px;
 	font-size: 4rem;
+}
+
+h3 {
+	font-size: 30px;
+	font-size: 3rem;
 }
 
 
@@ -30,7 +33,7 @@ h2 {
 		font-size: 70px;
 		font-size: 7rem;
     	margin: 0 0 1rem;
-		
+
 		@media screen and ( max-width: $breakpoint__tablet ) {
 			font-size: 50px;
 			font-size: 5rem;

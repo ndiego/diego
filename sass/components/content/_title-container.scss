@@ -1,24 +1,25 @@
 .title-container {
     background-color: $color__background-main;
-    
+
     .wrap {
         max-width: 736px;
-        padding: 3rem 0 4rem;
-        
+        padding: 3rem 0 6rem;
+
         @media screen and ( max-width: $breakpoint__tablet ) {
-            padding-bottom: 2rem;
+            padding-bottom: 4rem;
         }
     }
-    
+
     @media screen and ( max-width: $breakpoint__tablet ) {
         padding-left: 5%;
         padding-right: 5%;
     }
-    
+
     .entry-meta {
         display: flex;
         justify-content: space-between;
-        
+        margin-bottom: 2rem;
+
         .posted-on {
             font-family: $font__heavy;
             font-size: 1.4rem;
@@ -26,44 +27,45 @@
             text-transform: uppercase;
             opacity: $font__accent_opacity
         }
-        
+
         .social-share {
             display: flex;
             line-height: 1;
-            
+
             a {
                 color: $color__text-main;
                 text-decoration: none;
                 opacity: .3;
-                
+
                 &:hover {
                     opacity: 1;
                 }
             }
-            
+
             .social-share-title,
             .social-share-email {
                 display: none;
             }
-            
+
             svg {
                 font-size: 18px;
                 margin-left: 10px;
             }
         }
     }
-    
+
     .archive-title,
     .blog-title,
     .page-title,
     .entry-title {
         font-size: 5rem;
         margin: 0;
+        line-height: 1.2;
     }
-    
+
     .archive-title {
         font-size: 5rem;
-        
+
         .archive-label {
             font-size: 2rem;
             letter-spacing: .08em;
@@ -72,11 +74,11 @@
             opacity: $font__accent_opacity;
         }
     }
-    
+
     .widget {
         margin: 0;
     }
-    
+
     p {
         margin-top: 1rem;
     }
@@ -88,8 +90,8 @@
     .title-container {
         &.has-thumbnail {
             .wrap {
-                padding: 3rem 0 7rem;
-                
+                padding: 3rem 0 9rem;
+
                 @media screen and ( max-width: $breakpoint__tablet ) {
                     padding-bottom: 5rem;
                 }
@@ -102,10 +104,10 @@
 
 .social-share {
     display: flex;
-    
+
     .social-share-icon {
         max-width: 20px;
-        
+
         svg {
             max-width: 20px;
         }

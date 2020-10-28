@@ -18,7 +18,7 @@
 .entry-content,
 .entry-summary {
 	margin: 8rem 0 0;
-	
+
 	@media screen and ( max-width: $breakpoint__tablet ) {
 		margin: 4rem 0 0;
 	}
@@ -35,34 +35,30 @@
 .search {
 	.site-main {
 		margin-top: 8rem;
-		
+
 		@media screen and ( max-width: $breakpoint__tablet ) {
 			margin-top: 4rem;
 		}
-		
+
 		article {
 			margin-bottom: 6rem;
 		}
-		
+
 		.page-content,
 		.entry-content,
 		.entry-summary {
-			margin: 1.8rem 0 0;
-			
-			@media screen and ( max-width: $breakpoint__tablet ) {
-				margin: 1.8rem 0 0;
-			}
+			margin: 2.5rem 0 0;
 		}
-		
+
 		.entry-header {
 			display: flex;
 			justify-content: space-between;
-			
+
 			h2 {
 				margin: 0;
 				font-size: 3.5rem;
 			}
-			
+
 			.post-type {
 				display: inline-block;
 				background: #f0f1f2;
@@ -75,7 +71,7 @@
 				margin-top: 10px;
 				padding: .6rem 1rem .2rem;
 				text-transform: uppercase;
-				
+
 				&.post {
 					background: #d7e8dc;
 					color: #648a7c;
@@ -84,7 +80,7 @@
 					background: #d6e8fb;
 					color: #5b87b7;
 				}
-				
+
 				.critical-support {
 					background: #fbdcd4;
 					color: #bf6969;
@@ -95,7 +91,7 @@
 				}
 			}
 		}
-		
+
 		.entry-footer {
 			font-size: 1.2rem;
 			margin-top: 0;
@@ -108,16 +104,7 @@
 	clear: both;
 	margin: 0 0 1.5em;
 }
-/*
-.site-main .filter-by-tags,
-.site-main .hentry,  
-.site-main .comments-area,
-.site-main .no-results
 
-.site-main .filter-by-tags,
-.site-main .hentry,  
-.site-main .comments-area
-*/
 .site-main {
 	margin-right: auto;
 	margin-left: auto;
@@ -134,7 +121,7 @@
 	.post-thumbnail {
 		line-height: 0;
 		margin-top: -2em;
-		
+
 		img {
 			border-radius: $border__radius;
 			box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
@@ -143,7 +130,11 @@
 }
 
 .entry-content {
-	
+
+	& > :first-child {
+		margin-top: 0;
+	}
+
 	/* Custom into text styles */
 	.intro {
 		font-size: 2.6rem;
@@ -163,11 +154,11 @@
 	margin-top: 8rem;
     padding-top: 3rem;
 	text-transform: uppercase;
-	
+
 	@media screen and ( max-width: $breakpoint__tablet ) {
 		margin-top: 4rem;
 	}
-	
+
 	.edit-link {
 		a {
 			border-bottom: 0;
@@ -178,7 +169,7 @@
 			&:after {
 				content: none;
 			}
-			
+
 			&:hover {
 				color: $color__link-alt-hover
 			}
@@ -192,7 +183,7 @@
 	font-family: $font__heavy;
 	letter-spacing: .08em;
     text-transform: uppercase;
-	
+
 	a {
 		display: inline-block;
 		background: #f0f1f2;
@@ -207,7 +198,7 @@
 		&:after {
 			content: none;
 		}
-		
+
 		&:hover {
 			background: $color__link-tag-hover;
 			color: $color__text-main;
@@ -228,12 +219,12 @@
 	&.first {
 		margin-top: 8rem;
 		margin-bottom: 8rem;
-		
+
 		@media screen and ( max-width: $breakpoint__mobile ) {
 			margin: 6rem 0;
 		}
 	}
-	
+
 	&:not(.first) {
 		border-top: 1px solid #f0f1f2;
 		padding: 6rem 0 5rem;
@@ -246,37 +237,37 @@
 		margin-top: 2.5rem;
 		margin-bottom: 1rem;
     	line-height: 1.2;
-		
+
 		@media screen and ( max-width: $breakpoint__mobile ) {
 			font-size: 30px;
 			font-size: 3rem;
 		}
 	}
-	
+
 	p {
 		font-size: 18px;
 		font-size: 1.8rem;
 	}
-	
+
 	&:not(.alignwide) {
 		.wp-block-column {
 			display: flex;
 			flex-direction: column;
 		}
-		
+
 		p {
 			flex-grow: 1;
 		}
-		
+
 		h2 {
 			font-size: 30px;
 			font-size: 3rem;
 		}
 	}
-	
+
 	.project-status {
 		margin-bottom: 3rem;
-		
+
 		.status {
 			display: inline-block;
 			background: #f0f1f2;
@@ -288,12 +279,12 @@
 			margin-right: 15px;
 			padding: .6rem 1rem .2rem;
 			text-transform: uppercase;
-			
+
 			@media screen and ( max-width: $breakpoint__mobile ) {
 				margin-bottom: 5px;
 			}
 		}
-		
+
 		.development {
 			background: #d7e8dc;
     		color: #648a7c;
@@ -311,7 +302,7 @@
     		color: #8960b5;
 		}
 	}
-	
+
 	.project-meta {
 		display: flex;
 		justify-content: space-between;
@@ -322,21 +313,21 @@
 	    text-transform: uppercase;
 	    letter-spacing: .08em;
 	    margin: 0 0 3rem;
-		
+
 		.downloads {
 			line-height: 1.8;
-				
+
 			.dashicons {
 				color: $color__dark-grey;
 			}
 		}
-		
+
 		.rating {
 			color: $color__stars;
 		}
 	}
-	
-	.project-links {		
+
+	.project-links {
 		a {
 			margin-right: 2rem;
 			font-size: 1.4rem;
@@ -345,15 +336,15 @@
 			margin-bottom: 10px;
 		}
 	}
-	
+
 	@media screen and ( max-width: $breakpoint__mobile ) {
-		
+
 		&:not(.alignwide) {
 			&.wp-block-columns {
 				margin-bottom: 0;
 				padding-top: 5rem;
 			}
-			
+
 			.wp-block-column {
 				&:first-child {
 					padding-bottom: 6rem;
@@ -368,7 +359,7 @@
 /* Filter by tags component */
 .filter-by-tags {
 	margin-bottom: 6rem;
-	
+
 	label {
 		display: block;
 		font-size: 1.6rem;
@@ -377,7 +368,7 @@
 		margin-bottom: 1rem;
     	text-transform: uppercase;
 	}
-	
+
 	.tags-links {
 		font-size: 1.4rem;
 	}
@@ -388,7 +379,7 @@
 	padding: 100px 0 160px;
 	padding: 10rem 0 16rem;
     text-align: center;
-	
+
 	.page-header {
 		.error-code {
 			font-size: 120px;
@@ -399,11 +390,11 @@
 			margin: 0;
 		}
 	}
-	
+
 	.page-content {
 		margin: 20px 0 0;
 		margin: 2rem 0 0;
-		
+
 		.search-form {
 			margin-top: 60px;
 			margin-top: 6rem;
@@ -423,6 +414,3 @@
 		text-align: left !important;
 	}
 }
-
-
-

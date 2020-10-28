@@ -18,13 +18,18 @@ address {
 }
 
 pre {
-	background: $color__background-pre;
+	background: none;
 	font-family: $font__pre;
 	line-height: $font__line-height-pre;
 	margin-bottom: 1.6em;
 	max-width: 100%;
 	overflow: auto;
-	padding: 1.6em;
+	border-radius: 4px;
+	font-size: 1.8rem;
+	
+	code {
+		background: $color__background-main !important;
+	}
 }
 
 code,
@@ -32,6 +37,10 @@ kbd,
 tt,
 var {
 	font-family: $font__code;
+	font-size: 1.6rem;
+	padding: 4px 8px;
+	background: $color__background-main;
+	border-radius: 4px;
 }
 
 abbr,
