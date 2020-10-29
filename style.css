@@ -4,7 +4,7 @@ Theme URI: https://www.nickdiego.com
 Author: Nick Diego
 Author URI: https://www.nickdiego.com
 Description: The base theme for nickdiego.com
-Version: 1.0.6
+Version: 1.0.7
 Tested up to: 5.4
 Requires PHP: 5.6
 License: GNU General Public License v2 or later
@@ -569,6 +569,12 @@ h2 {
 	font-size: 4rem;
 }
 
+h2.section-header {
+	border-bottom: 1px solid #2222221a;
+	padding-bottom: 1.5rem;
+	margin-top: 5rem;
+}
+
 h3 {
 	font-size: 30px;
 	font-size: 3rem;
@@ -713,6 +719,12 @@ figure {
 table {
 	margin: 0 0 1.5em;
 	width: 100%;
+}
+
+.notice {
+	padding: 2rem;
+	background: #E3F0E7;
+	border-radius: 4px;
 }
 
 /* Links
@@ -1700,11 +1712,13 @@ textarea {
 }
 
 /* Filter by tags component */
-.filter-by-tags {
+.filter-by-tags,
+.filter-by-categories {
 	margin-bottom: 6rem;
 }
 
-.filter-by-tags label {
+.filter-by-tags label,
+.filter-by-categories label {
 	display: block;
 	font-size: 1.6rem;
 	font-family: "AvenirLTStd-Heavy", sans-serif;
@@ -1713,8 +1727,11 @@ textarea {
 	text-transform: uppercase;
 }
 
-.filter-by-tags .tags-links {
-	font-size: 1.4rem;
+.filter-by-tags .tags-links,
+.filter-by-tags .cat-links,
+.filter-by-categories .tags-links,
+.filter-by-categories .cat-links {
+	font-size: 1.2rem;
 }
 
 /* 404 Page Specific */

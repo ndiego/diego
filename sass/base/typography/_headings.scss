@@ -20,6 +20,12 @@ h6 {
 h2 {
 	font-size: 40px;
 	font-size: 4rem;
+
+	&.section-header {
+	  	border-bottom: 1px solid $color__borders;
+		padding-bottom: 1.5rem;
+		margin-top: 5rem;
+	}
 }
 
 h3 {

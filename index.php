@@ -15,22 +15,22 @@
 get_header();
 ?>
 	<div class="site-inner">
-	
+
 		<?php
 			if ( ! is_front_page() ) :
 				get_template_part( 'template-parts/title-container' );
-			endif;	
+			endif;
 		?>
 
 		<div class="content-sidebar-wrap">
 			<main id="primary" class="site-main">
 				<?php
-				
+
 				if ( have_posts() ) :
-					
+
 					/* Print the tags list at the top of the blog homepage */
 					if ( is_home() ) {
-						diego_fitler_tags_component();
+						diego_fitler_category_component();
 					}
 
 					/* Start the Loop */
@@ -42,22 +42,22 @@ get_header();
 						 * If you want to override this in a child theme, then include a file
 						 * called content-___.php (where ___ is the Post Type name) and that will be used instead.
 						 */
-						
+
 						if ( is_home() ) :
 							get_template_part( 'template-parts/content-archive' );
-						else : 
+						else :
 							get_template_part( 'template-parts/content', get_post_type() );
 						endif;
 
 					endwhile;
-					
+
 					if ( is_home() ) :
 						the_posts_pagination( array(
 							'mid_size'  => 2,
 							'prev_text' => '&laquo; ' . __( 'Previous Page', 'textdomain' ),
 							'next_text' => __( 'Next Page', 'textdomain' ) . ' &raquo;',
 						) );
-					else : 
+					else :
 						the_posts_navigation();
 					endif;
 

@@ -357,7 +357,8 @@
 }
 
 /* Filter by tags component */
-.filter-by-tags {
+.filter-by-tags,
+.filter-by-categories {
 	margin-bottom: 6rem;
 
 	label {
@@ -369,8 +370,9 @@
     	text-transform: uppercase;
 	}
 
-	.tags-links {
-		font-size: 1.4rem;
+	.tags-links,
+	.cat-links {
+		font-size: 1.2rem;
 	}
 }
 

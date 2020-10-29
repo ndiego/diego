@@ -44,23 +44,50 @@ add_action( 'wp_head', 'diego_pingback_header' );
  */
 function diego_print_all_tags() {
 	$tags = get_tags();
-	
+
 	foreach ( $tags as $tag ) {
 		$tag_link = get_tag_link( $tag->term_id );
-		
+
 		echo '<a href="' . $tag_link . '" title="' . $tag->name . '">' . $tag->name . '</a>';
 	}
 }
 
 /**
- * Display the "Filter by Tags" component 
+ * Display the "Filter by Tags" component
  */
 function diego_fitler_tags_component() {
 	?>
-	<aside class="filter-by-tags"> 
+	<aside class="filter-by-tags">
 		<label><?php _e( 'Sort by topics:', 'diego' );?></label>
 		<div class="tags-links">
 			<?php diego_print_all_tags(); ?>
+		</div>
+	</aside>
+	<?php
+}
+
+/**
+ * Print a lsit of all categories
+ */
+function diego_print_all_categories() {
+	$categories = get_categories();
+
+	foreach ( $categories as $category ) {
+		$$category_link = get_category_link( $category->term_id );
+
+		echo '<a href="' . $$category_link . '" title="' . $category->name . '">' . $category->name . '</a>';
+	}
+}
+
+/**
+ * Display the "Filter by Tags" component
+ */
+function diego_fitler_category_component() {
+	?>
+	<aside class="filter-by-categories">
+		<label><?php _e( 'Sort by topics:', 'diego' );?></label>
+		<div class="cat-links">
+			<?php diego_print_all_categories(); ?>
 		</div>
 	</aside>
 	<?php
