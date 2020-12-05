@@ -1,23 +1,24 @@
 @import url("//hello.myfonts.net/count/3c1b90");
+
 @font-face {
-	font-family: 'AvenirLTStd-Heavy';
+	font-family: "AvenirLTStd-Heavy";
 	src: url("webFonts/AvenirLTStd-Heavy/font.woff2") format("woff2"), url("webFonts/AvenirLTStd-Heavy/font.woff") format("woff");
 }
 
 @font-face {
-	font-family: 'AvenirLTStd-Book';
+	font-family: "AvenirLTStd-Book";
 	src: url("webFonts/AvenirLTStd-Book/font.woff2") format("woff2"), url("webFonts/AvenirLTStd-Book/font.woff") format("woff");
 }
 
 @font-face {
-	font-family: 'AvenirLTStd-Medium';
+	font-family: "AvenirLTStd-Medium";
 	src: url("webFonts/AvenirLTStd-Medium/font.woff2") format("woff2"), url("webFonts/AvenirLTStd-Medium/font.woff") format("woff");
 }
 
 body {
 	color: #222;
-    font-family: 'AvenirLTStd-Book', sans-serif;
-	font-size: 20px; 	
+	font-family: "AvenirLTStd-Book", sans-serif;
+	font-size: 20px;
 }
 
 h1,
@@ -27,55 +28,56 @@ h4,
 h5,
 h6 {
 	clear: both;
-    font-family: 'AvenirLTStd-Heavy', sans-serif;
+	font-family: "AvenirLTStd-Heavy", sans-serif;
 	font-weight: normal;
 }
 
-b, strong {
-    font-family: "AvenirLTStd-Heavy", sans-serif;
-    font-weight: normal;
+b,
+strong {
+	font-family: "AvenirLTStd-Heavy", sans-serif;
+	font-weight: normal;
 }
 
 .period {
-	opacity: .3;
+	opacity: 0.3;
 }
 
 /* Custom font classes */
 .intro {
-	font-family: 'AvenirLTStd-Heavy', sans-serif;
+	font-family: "AvenirLTStd-Heavy", sans-serif;
 }
 
 
 /* Main column width */
 .wp-block {
-    max-width: 736px;
+	max-width: 736px;
 }
- 
+
 /* Width of "wide" blocks */
 .wp-block[data-align="wide"] {
-    max-width: 1080px;
+	max-width: 1080px;
 }
- 
+
 /* Width of "full-wide" blocks */
 .wp-block[data-align="full"] {
-    max-width: none;
+	max-width: none;
 }
 
 /* Buttons */
 .wp-block-button__link {
-    border: 2px solid;
-    border-color: #222;
-    border-radius: 4px;
-    background: transparent;
-    color: #222;
-    cursor: pointer;
-    font-family: 'AvenirLTStd-Heavy', sans-serif;
-    font-size: 16px;
-    letter-spacing: .08em;
-    line-height: 1;
-    outline: 0;
-    padding: 1em 1.2em .7em;
-    text-transform: uppercase;   
+	border: 2px solid;
+	border-color: #222;
+	border-radius: 4px;
+	background: transparent;
+	color: #222;
+	cursor: pointer;
+	font-family: "AvenirLTStd-Heavy", sans-serif;
+	font-size: 16px;
+	letter-spacing: 0.08em;
+	line-height: 1;
+	outline: 0;
+	padding: 1em 1.2em 0.7em;
+	text-transform: uppercase;
 }
 
 
