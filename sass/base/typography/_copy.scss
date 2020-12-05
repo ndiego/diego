@@ -10,7 +10,18 @@ i {
 }
 
 blockquote {
-	margin: 0 1.5em;
+	border-left: 4px solid #222;
+	margin: 0 0 3rem;
+	padding: 0 3rem;
+
+	p {
+		margin: 0 0 1.4rem
+	}
+	
+	cite {
+		font-style: normal;
+		font-size: 1.6rem;
+	}
 }
 
 address {
@@ -26,7 +37,7 @@ pre {
 	overflow: auto;
 	border-radius: 4px;
 	font-size: 1.8rem;
-	
+
 	code {
 		background: $color__background-main !important;
 	}

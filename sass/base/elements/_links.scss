@@ -1,5 +1,6 @@
 a {
 	color: $color__text-main;
+	text-decoration: none;
 
 	&:visited {
 		color: $color__link-visited;
@@ -21,6 +22,7 @@ a {
 	}
 }
 
+/*
 .entry-header,
 .entry-content,
 .entry-footer,
@@ -38,7 +40,7 @@ a {
 		font-family: 'AvenirLTStd-Heavy', sans-serif;
 		position: relative;
 		text-decoration: none;
-		
+
 		&:after {
 			background-color: #222;
 			bottom: -1px;
@@ -50,14 +52,41 @@ a {
 			visibility: hidden;
 			width: 0;
 		}
-		
+
 		&:hover {
 			&:after {
 				visibility: visible;
 				width: 100%;
 			}
 		}
-		
+
+	}
+}
+*/
+
+.entry-header,
+.entry-content,
+.comment-author,
+.comment-content,
+.comment-form,
+.comment-body .reply,
+.site-footer .footer-left,
+.widget-area {
+	a:not(.button):not(.button-light):not(.inline-button):not(.wp-block-button__link):not(.post-edit-link) {
+		color: $color__text-main;
+		font-family: 'AvenirLTStd-Heavy', sans-serif;
+		text-decoration: none;
+		background: 0 0;
+		background-repeat: no-repeat;
+	    background-image: linear-gradient(transparent calc(100% - 2px),#222 0),linear-gradient(transparent calc(100% - 2px),$color__link-border 0);
+	    background-size: 0 100%,100% 100%;
+	    -webkit-transition: all .3s;
+	    transition: all .3s;
+
+		&:hover {
+    		background-size: 100% 100%,100% 100%;
+		}
+
 	}
 }
 
@@ -65,8 +94,8 @@ a {
 	margin: 8rem auto;
 	text-align: center;
 	font-family: $font__heavy;
-	
-	a, 
+
+	a,
 	span {
 		background: $color__background-main;
 		border-radius: $border__radius;
@@ -82,19 +111,19 @@ a {
 		text-decoration: none;
 		text-transform: uppercase;
 	}
-	
-	.prev, 
+
+	.prev,
 	.next {
 		padding-left: 1.4rem;
 		padding-right: 1.4rem;
 	}
-	
+
 	a {
 		&:hover {
 			background: $color__link-tag-hover;
 		}
 	}
-	
+
 	span {
 		background: $color__text-main;
 		color: #fff;
